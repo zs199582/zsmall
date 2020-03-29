@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.4/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../Flat-UI-master/dist/css/flat-ui.min.css"/>
+    <script src="../Flat-UI-master/dist/js/vendor/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
+    <script src="../Flat-UI-master/dist/js/flat-ui.min.js"></script>
+</head>
+<body>
+<!--输入用户的手机号框-->
+<!-- Static navbar -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a  class="navbar-brand" id="userinfo" href="Login.html">请[登录]</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right hidden-sm">
+                <li><a href="../index.html">首页</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+        <h4 class="form-title">已购买的内容</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>商品图片</th>
+                    <th>商品名称</th>
+                    <th>购买时间</th>
+                    <th>购买数量</th>
+                    <th>购买价格</th>
+                </tr>
+                </thead>
+                <tbody id="container">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    //定义全局商品数组信息
+    var g_itemList = [];
+    jQuery(document).ready(function(){
+        judgeLogin();
+        $.ajax({
+            type:"GET",
+            url:"http://localhost:8090/listOrder",
+            xhrFields:{withCredentials:true},
+            success:function(data){
+                if(data.status=="success"){
+                    g_itemList=data.data;
+                    reloadDom();
+                }else{
+                    alert("获取订单信息失败，原因为"+data.data.errMsg);
+                }
+            },
+            error:function(data){
+                alert("获取订单信息失败，原因为"+data.responseText);
+            }
+        });
+    });
+    function reloadDom(){
+        var totalMoney = 0;
+        for(var i = 0;i< g_itemList.length;i++){
+            var orderVO = g_itemList[i];
+            var dom = "<tr><td>"+orderVO.title+"</td><td><img style='width:100px;height:100px' src='"+orderVO.imgUrl+"'/></td><td>"+orderVO.time+"</td><td>"+
+                orderVO.amount+"</td><td>￥ "+orderVO.price+"</td></tr>"
+            totalMoney +=orderVO.price*orderVO.amount;
+            $("#container").append($(dom));
+        }
+        var totalDiv = "<tr><td></td><td></td><td></td><td></td><td>总计：￥ "+totalMoney+"</td></tr>";
+        $("#container").append($(totalDiv));
+    }
+    function judgeLogin(){
+        $.ajax({
+            type:"GET",
+            url:"http://localhost:8090/user/getUser",
+            success:function(data){
+                if(data.data==null){
+                }
+                else if(data.data.name=="seller"){
+                    $("#userinfo").html("卖家你好,seller!  [退出]");
+                }
+                else if(data.data.name=="buyer"){
+                    $("#userinfo").html("买家你好,buyer! [退出]");
+                }
+            }
+        })
+    }
+</script>
+
+</html>

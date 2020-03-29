@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../bootstrap-3.3.4/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../Flat-UI-master/dist/css/flat-ui.min.css"/>
+    <script src="../Flat-UI-master/dist/js/vendor/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
+    <script src="../Flat-UI-master/dist/js/flat-ui.min.js"></script>
+    <title></title>
+    <style>
+        .row{
+            margin-left: 20px;
+            margin-right: 20px;;
+        }
+        .line-center{
+            line-height:50px;
+            text-align: center;
+        }
+        .row input{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+<!-- Static navbar -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a  class="navbar-brand" id="userinfo" href="Login.html">请[登录]</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right hidden-sm">
+                <li><a href="../index.html">首页</a></li>
+                <li><a id="financial" onclick="financial()">账务</a></li>
+                <li><a id="cart" onclick="cart()">购物车</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+<!--content-->
+<div class="container">
+    <div class="row thumbnail center">
+        <div class="col-sm-12">
+            <h3 class="text-center" style="margin-bottom: 30px">购物车</h3>
+        </div>
+        <div class="content">
+            <h5 class="form-title">商品信息</h5>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>商品名</th>
+                        <th>商品价格</th>
+                        <th>购买数量</th>
+                    </tr>
+                    </thead>
+                    <tbody id="container">
+
+                    </tbody>
+                </table>
+            </div>
+            <!--<div class="col-sm-12 thumbnail">-->
+                <!--<div class=" col-sm-offset-4 col-sm-2 text-right" >总数:</div>-->
+                <!--<div class="col-sm-2" id="totalCount"></div>-->
+                <!--<div class="col-sm-2 text-right" >总价:</div>-->
+                <!--<div class="col-sm-2" id="totalPrice"></div>-->
+            <!--</div>-->
+        </div>
+        <div class="col-sm-offset-7 col-sm-5" style="padding: 30px;">
+            <div class="col-sm-6 btn btn-success btn-block" onclick="submit()">购买</div>
+            <div class="col-sm-6  btn btn-success btn-block" onclick="back()">返回</div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    var items;
+    var totalCount=0;
+    var totalPrice=0;
+    var g_itemId =[];
+    var g_amount =[];
+    //提交订单
+    function submit(){
+        if(items==null)
+        {
+            alert("购物车为空，请返回首页选购");
+            return;
+        }
+        $.ajax({
+            type:"POST",
+            url:"http://localhost:8090/createOrder",
+            // data:{
+            //     "itemId":itemId,
+            //     "amount":amount
+            // },
+            xhrFields:{withCredentials:true},
+            success:function(data){
+                if(data.status=="success"){
+                    window.location.href="OrderList.html";
+                }else{
+                    alert("订单创建失败，原因为"+data.data.errMsg);
+                }
+            },
+            error:function(data){
+                alert("订单创建失败，原因为"+data.responseText);
+            }
+        })
+    }
+    function back(){
+        window.history.back();
+    }
+    jQuery(document).ready(function(){
+        judgeLogin();
+        $.ajax({
+            type:"GET",
+            url:"http://localhost:8090/getCart",
+            xhrFields:{withCredentials:true},
+            contentType:"application/x-www-form-urlencoded",
+            success:function(data){
+                //ajax获取session中的所有商品信息
+               items = data.data;
+               // alert(Object.getOwnPropertyNames(map).length);
+               // var item = map[1];
+               // var amount = map[1].amount;
+               // var title = map[1].itemModel.title;
+               // alert(title+amount);
+                reloadDom();
+            },
+            error:function (data) {
+                alert("购物车信息获取失败");
+            }
+        })
+    });
+    function reloadDom(){
+            for(var k in items){
+                //购买的数量
+                var amount = items[k].amount;
+                //购买的商品
+                var itemVO = items[k].itemModel;
+                var dom = "<tr data-id='"+itemVO.id+"' id='itemDetail"+itemVO.id+"'><td>"+itemVO.title+"</td><td>"+itemVO.price+"</td><td>"+amount+"</td></tr>"
+                $("#container").append($(dom));
+                //全局数组
+                // g_itemId.put(itemVO.id);
+                // g_amount.put(amount);
+            }
+    }
+    function judgeLogin(){
+        $.ajax({
+            type:"GET",
+            url:"http://localhost:8090/user/getUser",
+            success:function(data){
+                if(data.data==null){
+
+                }
+                else if(data.data.name=="seller"){
+                    $("#userinfo").html("卖家你好,seller!  [退出]");
+                }
+                else if(data.data.name=="buyer"){
+                    $("#userinfo").html("买家你好,buyer! [退出]");
+
+                }
+            }
+        })
+    }
+    function financial() {
+        window.location.href="OrderList.html";
+    }
+    function cart(){
+        window.location.href="Cart.html";
+    }
+</script>
+</html>
