@@ -38,6 +38,10 @@ public class ItemModel {
      */
     private Integer isBought;
 
+    public class InnerData{
+
+    }
+
     public Integer getIsBought() {
         return isBought;
     }
