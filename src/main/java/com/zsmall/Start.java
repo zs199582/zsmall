@@ -13,5 +13,10 @@ public class Start {
 
     public static void main(String[] args) {
         SpringApplication.run(Start.class,args);
+//        int a = Math.abs(String.valueOf(300204464).hashCode()%1009);
+//        System.out.println(a);
+        long couponId = Long.parseLong("21992707");
+        System.out.println(couponId);
+        String methodName = Thread.currentThread().getStackTrace()[0].getMethodName();
     }
 }

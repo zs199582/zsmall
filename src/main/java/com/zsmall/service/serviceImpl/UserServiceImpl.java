@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserModel loginValidate(String username, String password)  throws ServiceException {
         //先从数据库中读取用户
-        UserDO user =  userDOMapper.selectByUserName(username);
+        UserDO user = userDOMapper.selectByUserName(username);
         //判断用户是否存在
         if(user==null){
             throw new ServiceException(EmServiceError.USER_NOT_EXIST,"用户不存在");
