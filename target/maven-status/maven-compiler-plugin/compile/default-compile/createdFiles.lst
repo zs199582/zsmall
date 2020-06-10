@@ -1,3 +1,4 @@
+com\zsmall\Error\EmServiceError.class
 com\zsmall\dataobject\UserDO.class
 com\zsmall\dataobject\OrderDO.class
 com\zsmall\service\model\UserModel.class
@@ -11,10 +12,16 @@ com\zsmall\controller\CartController.class
 com\zsmall\service\model\FinacialModel.class
 com\zsmall\service\model\CartModel.class
 com\zsmall\response\CommonReturnType.class
+com\zsmall\controller\UserController.class
 com\zsmall\dao\ItemDOMapper.class
+com\zsmall\controller\ItemController.class
+com\zsmall\controller\OrderController.class
+com\zsmall\service\serviceImpl\UserServiceImpl.class
 com\zsmall\response\GitCommitTest.class
 com\zsmall\Error\CommonError.class
 com\zsmall\service\OrderService.class
+com\zsmall\service\serviceImpl\ItemServiceImpl.class
+com\zsmall\service\serviceImpl\OrderServiceImpl.class
 com\zsmall\response\GitCommitTest2.class
 com\zsmall\service\ItemService.class
 com\zsmall\service\model\ItemModel.class
