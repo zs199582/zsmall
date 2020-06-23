@@ -3,6 +3,8 @@ package com.zsmall;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.BeforeFilter;
+import com.google.common.collect.Lists;
+import com.zsmall.util.RedisUtil;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,286 +26,54 @@ public class Start {
 
     public static void main(String[] args) {
         SpringApplication.run(Start.class,args);
-        String test = "{\n" +
-                "\t\"code\": 200,\n" +
-                "\t\"msg\": \"SUCCESS\",\n" +
-                "\t\"data\": [{\n" +
-                "\t\t\"sku_id\": 1006002,\n" +
-                "\t\t\"is_new\": false,\n" +
-                "\t\t\"price\": 1000.0,\n" +
-                "\t\t\"sale_amount_no_tax\": 265.4867256637168,\n" +
-                "\t\t\"performance_fee\": 0.0365,\n" +
-                "\t\t\"profit_rate\": 0.9001079999999999,\n" +
-                "\t\t\"performance_profit_rate\": 0.8999705166666667,\n" +
-                "\t\t\"invoice_rate\": 0.13,\n" +
-                "\t\t\"no_tax_cost\": 26.52,\n" +
-                "\t\t\"p4_discount\": 0.3\n" +
-                "\t}],\n" +
-                "\t\"requestId\": \"33b4d14eb5a9f98648c670ff96595cf5\"\n" +
-                "}\n";
-//        ActReportGrossMarginResponse responseData = JSON.parseObject(test,ActReportGrossMarginResponse.class);
-////        ActReportGrossMarginResponse a = grossMarginData.get(0);
-//        System.out.println(responseData.getData().get(0).getSkuId());
-//        List<ActReportDpsSkuGrossMarginData> grossMarginData = responseData.getData();
-//        if(grossMarginData.size()!=0) {
-//            Map<Long, ActReportDpsSkuGrossMarginData> dataMap = grossMarginData.stream()
-//                    .collect(Collectors.toMap(ActReportDpsSkuGrossMarginData::getSkuId, Function.identity()));
-//            //sku赋值 保留两位小数，四舍五入
-//            NumberFormat percent = NumberFormat.getPercentInstance();
-//            percent.setMinimumFractionDigits(2);
-//            CouponItemTO sku = new CouponItemTO();
-//            sku.setSkuId(1006002L);
-//                Long skuId = sku.getSkuId();
-//                ActReportDpsSkuGrossMarginData data = dataMap.get(skuId);
-////                sku.setSaleAmountNoTax(data.getSaleAmountNoTax().toString());//销售额（不含税）
-////                sku.setPerformanceFee(data.getPerformanceFee().toString());//履约费用
-////                sku.setProfitRate(data.getProfitRate().toString());//商品毛利率
-////                sku.setPerformanceProfitRate(data.getPerformanceProfitRate().toString());//履约毛利率
-////                sku.setInvoiceRate(data.getInvoiceRate().toString());//消费税率
-////                sku.setNoTaxCost(data.getNoTaxCost().toString());//商品不含税总成本
-//                sku.setSaleAmountNoTax(new BigDecimal(data.getSaleAmountNoTax()).setScale(2,BigDecimal.ROUND_UP).toPlainString());//销售额（不含税）
-//                sku.setPerformanceFee(new BigDecimal(data.getPerformanceFee()).setScale(2,BigDecimal.ROUND_UP).toPlainString());//履约费用
-//                sku.setProfitRate(percent.format(data.getProfitRate()));//商品毛利率
-//                sku.setPerformanceProfitRate(percent.format(data.getPerformanceProfitRate()));//履约毛利率
-//                sku.setInvoiceRate(percent.format(data.getInvoiceRate()));//消费税率
-//                sku.setNoTaxCost(new BigDecimal(data.getNoTaxCost()).setScale(2,BigDecimal.ROUND_UP).toPlainString());//商品不含税总成本
-//                System.out.println(JSON.toJSONString(sku));
-//        }
-        String str = "{\n" +
-                "    \"code\":200,\n" +
-                "    \"data\":[\n" +
-                "        {\n" +
-                "            \"invoiceRate\":0.13,\n" +
-                "            \"noTaxCost\":107.324266,\n" +
-                "            \"p4Discount\":0.3,\n" +
-                "            \"performanceFee\":0.1016,\n" +
-                "            \"performanceProfitRate\":0.5386468965491031,\n" +
-                "            \"price\":263.12,\n" +
-                "            \"profitRate\":0.5390832297810886,\n" +
-                "            \"saleAmountNoTax\":232.84955752212392,\n" +
-                "            \"skuId\":1052005\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"invoiceRate\":0.13,\n" +
-                "            \"noTaxCost\":114.209466,\n" +
-                "            \"p4Discount\":0.6,\n" +
-                "            \"performanceFee\":0.056,\n" +
-                "            \"performanceProfitRate\":0.5092734243691092,\n" +
-                "            \"price\":263.12,\n" +
-                "            \"profitRate\":0.5095139230009121,\n" +
-                "            \"saleAmountNoTax\":232.84955752212392,\n" +
-                "            \"skuId\":1052006\n" +
-                "        }\n" +
-                "    ],\n" +
-                "    \"msg\":\"SUCCESS\"\n" +
-                "}";
-        String listJson = "[\n" +
-                "    {\n" +
-                "        \"auditStatus\":\"\",\n" +
-                "        \"buStatus\":\"\",\n" +
-                "        \"deadStockPrice\":\"89.70\",\n" +
-                "        \"discount\":\"0.88\",\n" +
-                "        \"isDeadStock\":\"1\",\n" +
-                "        \"isPingcang\":\"否\",\n" +
-                "        \"itemId\":0,\n" +
-                "        \"lowestPrice\":\"0.00\",\n" +
-                "        \"originPrice\":\"299.00\",\n" +
-                "        \"p3p4\":false,\n" +
-                "        \"promotion\":\"\",\n" +
-                "        \"realPrice\":\"263.12\",\n" +
-                "        \"saleStock\":\"0\",\n" +
-                "        \"selectStatus\":\"未配置\",\n" +
-                "        \"shipStock\":\"0\",\n" +
-                "        \"skuCostNotaxfee\":\"107.32\",\n" +
-                "        \"skuId\":1052005,\n" +
-                "        \"status\":\"新增\",\n" +
-                "        \"turnOverDays\":\"0\",\n" +
-                "        \"x_Y\":\"0.88\"\n" +
-                "    },\n" +
-                "    {\n" +
-                "        \"auditStatus\":\"\",\n" +
-                "        \"buStatus\":\"\",\n" +
-                "        \"deadStockPrice\":\"\",\n" +
-                "        \"discount\":\"0.88\",\n" +
-                "        \"isDeadStock\":\"0\",\n" +
-                "        \"isPingcang\":\"否\",\n" +
-                "        \"itemId\":0,\n" +
-                "        \"lowestPrice\":\"161.50\",\n" +
-                "        \"originPrice\":\"299.00\",\n" +
-                "        \"p3p4\":false,\n" +
-                "        \"promotion\":\"\",\n" +
-                "        \"realPrice\":\"263.12\",\n" +
-                "        \"saleStock\":\"0\",\n" +
-                "        \"selectStatus\":\"未配置\",\n" +
-                "        \"shipStock\":\"0\",\n" +
-                "        \"skuCostNotaxfee\":\"114.21\",\n" +
-                "        \"skuId\":1052006,\n" +
-                "        \"status\":\"新增\",\n" +
-                "        \"turnOverDays\":\"0\",\n" +
-                "        \"x_Y\":\"0.88\"\n" +
-                "    }\n" +
-                "]";
-        ActReportGrossMarginResponse responseData = JSON.parseObject(str,ActReportGrossMarginResponse.class);
-        List<ActReportDpsSkuGrossMarginData> grossMarginData = responseData.getData();
-        Map<Long, ActReportDpsSkuGrossMarginData> dataMap = grossMarginData.stream()
-                .collect(Collectors.toMap(ActReportDpsSkuGrossMarginData::getSkuId, Function.identity()));
-        NumberFormat percent = NumberFormat.getPercentInstance();
-        percent.setMinimumFractionDigits(2);
-        List<CouponItemTO> list = JSON.parseArray(listJson,CouponItemTO.class);
-        list.forEach(sku -> {
-            Long skuId = sku.getSkuId();
-            ActReportDpsSkuGrossMarginData data = dataMap.get(skuId);
-//                sku.setSaleAmountNoTax(data.getSaleAmountNoTax().toString());//销售额（不含税）
-//                sku.setPerformanceFee(data.getPerformanceFee().toString());//履约费用
-//                sku.setProfitRate(data.getProfitRate().toString());//商品毛利率
-//                sku.setPerformanceProfitRate(data.getPerformanceProfitRate().toString());//履约毛利率
-//                sku.setInvoiceRate(data.getInvoiceRate().toString());//消费税率
-//                sku.setNoTaxCost(data.getNoTaxCost().toString());//商品不含税总成本
-            sku.setSaleAmountNoTax(new BigDecimal(data.getSaleAmountNoTax()).setScale(2,BigDecimal.ROUND_UP).toPlainString());//销售额（不含税）
-            sku.setPerformanceFee(new BigDecimal(data.getPerformanceFee()).setScale(2,BigDecimal.ROUND_UP).toPlainString());//履约费用
-//            sku.setProfitRate(percent.format(data.getProfitRate()));//商品毛利率
-            sku.setPerformanceProfitRate(percent.format(data.getPerformanceProfitRate()));//履约毛利率
-            sku.setInvoiceRate(percent.format(data.getInvoiceRate()));//消费税率
-            sku.setNoTaxCost(new BigDecimal(data.getNoTaxCost()).setScale(2,BigDecimal.ROUND_UP).toPlainString());//商品不含税总成本
-            sku.setGrossMargin("商品毛利率:"+sku.getProfitRate()+"\n"+"履约毛利率:"+sku.getPerformanceProfitRate());
-        });
-        //
-        String queryResultJson = "{\n" +
-                "    \"datas\":[\n" +
-                "        [\n" +
-                "            0,\n" +
-                "            1,\n" +
-                "            0,\n" +
-                "            1051002,\n" +
-                "            0,\n" +
-                "            0,\n" +
-                "            1052006,\n" +
-                "            \"0\",\n" +
-                "            0\n" +
-                "        ],\n" +
-                "        [\n" +
-                "            0,\n" +
-                "            1,\n" +
-                "            0,\n" +
-                "            1051002,\n" +
-                "            0,\n" +
-                "            0,\n" +
-                "            1052005,\n" +
-                "            \"0\",\n" +
-                "            0\n" +
-                "        ]\n" +
-                "    ],\n" +
-                "    \"fields\":[\n" +
-                "        {\n" +
-                "            \"dataType\":\"double\",\n" +
-                "            \"fieldname\":\"deduct_ratio\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"dataType\":\"long\",\n" +
-                "            \"fieldname\":\"bind_store_type\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"dataType\":\"double\",\n" +
-                "            \"fieldname\":\"settle_price\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"dataType\":\"long\",\n" +
-                "            \"fieldname\":\"item_id\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"dataType\":\"long\",\n" +
-                "            \"fieldname\":\"is_grossmarginprotect\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"dataType\":\"double\",\n" +
-                "            \"fieldname\":\"grossmarginprotect_percent\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"dataType\":\"long\",\n" +
-                "            \"fieldname\":\"sku_id\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"dataType\":\"string\",\n" +
-                "            \"fieldname\":\"item_business_form\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"dataType\":\"long\",\n" +
-                "            \"fieldname\":\"settle_mode\"\n" +
-                "        }\n" +
-                "    ]\n" +
-                "}";
-        //结果集合
-//        List<ActReportDpsRealtimeSkuData> totalResult = new ArrayList<>(2);
-//        DataQueryResult queryResult = JSON.parseObject(queryResultJson,DataQueryResult.class);
-//        List<List<Object>> datas = queryResult.getDatas();
-//        //
-//        Map<String,java.lang.reflect.Field> fieldMap = new HashMap<>();
-//        fieldMap.put("",)
-//        //赋值
-//        List<Field> dqsFields = queryResult.getFields();
-//        for(List<Object>data:datas){
-//            //为每一个sku创建一个实时数据模型
-//            ActReportDpsRealtimeSkuData realtimeDataForSku = new ActReportDpsRealtimeSkuData();
-//            for(int i = 0;i<data.size();i++){
-//                com.netease.mail.dp.dqs.model.result.result.Field dqsField = dqsFields.get(i);
-//                //dqsField 映射到 实际的字段
-//                java.lang.reflect.Field field = fieldMap.get(dqsField.getFieldname());
-//                //字段赋值
-//                field.set(realtimeDataForSku,data.get(i));
-//            }
-//            totalResult.add(realtimeDataForSku);
-//        }
-//        System.out.println(percent.format(new BigDecimal(new Double(0.0))));
-//        List<CouponItemTO> listC = new ArrayList<>(4);
-//        for(int i = 0;i<5;i++){
-//            CouponItemTO couponItemTO = new CouponItemTO();
-//            couponItemTO.setGrossMargin(String.valueOf(i));
-//            listC.add(couponItemTO);
-//        }
-//        CouponItemTO couponItemTO = new CouponItemTO();
-//        couponItemTO.setGrossMargin("7");
-//        int index = listC.indexOf(couponItemTO);
-//        listC.remove(index);
-//        listC.add(0,couponItemTO);
-//        System.out.println(JSON.toJSONString(listC));
-//        System.out.println(dataMap);
-//        BigDecimal a = new BigDecimal("0.0");
-//        if(a.doubleValue()==0){
-//            System.out.println("00");
-//        }
-        String before = "[{\"bu\":{\"orgPosId\":230,\"orgPosName\":\"海外综合部3\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"\",\"itemId\":1260050,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"给戒指一个家，动物乐园系列戒托\",\"itemStatus\":0,\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"18.59\",\"lowestPrice\":\"59.00\",\"performanceProfitRate\":\"27.65%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"79.00\",\"originPrice\":\"79.00\",\"performanceFee\":\"0.63\",\"itemName\":\"给戒指一个家，动物乐园系列戒托\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"29\",\"skuCostNotaxfee\":\"48.94\",\"saleStock\":\"31\",\"skuId\":\"1555045\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"78.20\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"30.00%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1260050\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:30.00%\\n履约毛利率:27.65%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1260050,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1555045,\"skuSpec\":\"兔子\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"18.59\",\"lowestPrice\":\"59.00\",\"performanceProfitRate\":\"29.67%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"79.00\",\"originPrice\":\"79.00\",\"performanceFee\":\"0.09\",\"itemName\":\"给戒指一个家，动物乐园系列戒托\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"252\",\"skuCostNotaxfee\":\"47.67\",\"saleStock\":\"118\",\"skuId\":\"1555046\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"78.20\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"30.00%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1260050\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:30.00%\\n履约毛利率:29.67%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1260050,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1555046,\"skuSpec\":\"大象\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"苹果>苹果-苹果；特色类目>我的世界；母婴亲子>星星\",\"itemId\":1650028,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"选品-海外-北欧休闲摇椅\",\"itemStatus\":2,\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"627.08\",\"lowestPrice\":\"879.00\",\"performanceProfitRate\":\"-264.44%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"923.16\",\"originPrice\":\"1099.00\",\"performanceFee\":\"17.95\",\"itemName\":\"选品-海外-北欧休闲摇椅\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"627.07\",\"saleStock\":\"0\",\"skuId\":\"1705129\",\"p3MinDisc\":\"0.84\",\"p3MinDiscAdjPrice\":\"912.17\",\"saleAmountNoTax\":\"177.00\",\"profitRate\":\"-254.29%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1650028\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-254.29%\\n履约毛利率:-264.44%\",\"promotion\":\"\",\"realPrice\":\"200\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1650028,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1705129,\"skuSpec\":\"红\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"635.35\",\"lowestPrice\":\"879.00\",\"performanceProfitRate\":\"-269.11%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"923.16\",\"originPrice\":\"1099.00\",\"performanceFee\":\"17.95\",\"itemName\":\"选品-海外-北欧休闲摇椅\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"635.34\",\"saleStock\":\"0\",\"skuId\":\"1705130\",\"p3MinDisc\":\"0.84\",\"p3MinDiscAdjPrice\":\"912.17\",\"saleAmountNoTax\":\"177.00\",\"profitRate\":\"-258.97%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1650028\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-258.97%\\n履约毛利率:-269.11%\",\"promotion\":\"\",\"realPrice\":\"200\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1650028,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1705130,\"skuSpec\":\"白\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"特色类目>我的世界；食品酒水二>爆品测试\",\"itemId\":1451012,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemStatus\":2,\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"26.20\",\"lowestPrice\":\"49.90\",\"performanceProfitRate\":\"-445.10%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"59.90\",\"originPrice\":\"59.90\",\"performanceFee\":\"118.53\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"28\",\"skuCostNotaxfee\":\"26.19\",\"saleStock\":\"160\",\"skuId\":\"1484065\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"59.10\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"1.33%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"true\",\"shipStock\":\"2168\",\"grossMargin\":\"商品毛利率:1.33%\\n履约毛利率:-445.10%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1451012,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1484065,\"skuSpec\":\"切片刀（菜刀）\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"30.10\",\"lowestPrice\":\"37.40\",\"performanceProfitRate\":\"-415.94%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"49.90\",\"originPrice\":\"49.90\",\"performanceFee\":\"106.88\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"135\",\"skuCostNotaxfee\":\"30.05\",\"saleStock\":\"877\",\"skuId\":\"1484066\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"49.10\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-13.37%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-13.37%\\n履约毛利率:-415.94%\",\"deadStockPrice\":\"37.43\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1451012,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1484066,\"skuSpec\":\"砍骨刀\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"19.69\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-303.58%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"44.90\",\"originPrice\":\"44.90\",\"performanceFee\":\"87.47\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"72\",\"skuCostNotaxfee\":\"19.68\",\"saleStock\":\"813\",\"skuId\":\"1484067\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"44.10\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"25.87%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:25.87%\\n履约毛利率:-303.58%\",\"deadStockPrice\":\"31.43\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1451012,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1484067,\"skuSpec\":\"厨师刀\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"9.83\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-204.83%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"24.90\",\"originPrice\":\"24.90\",\"performanceFee\":\"71.11\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"78\",\"skuCostNotaxfee\":\"9.82\",\"saleStock\":\"593\",\"skuId\":\"1484068\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"24.60\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"63.00%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"false\",\"shipStock\":\"1536\",\"grossMargin\":\"商品毛利率:63.00%\\n履约毛利率:-204.83%\",\"deadStockPrice\":\"17.43\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1451012,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1484068,\"skuSpec\":\"水果刀\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"20.41\",\"lowestPrice\":\"27.00\",\"performanceProfitRate\":\"23.13%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"28.00\",\"originPrice\":\"35.00\",\"performanceFee\":\"0.01\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"11850\",\"skuCostNotaxfee\":\"20.40\",\"saleStock\":\"375\",\"skuId\":\"1484069\",\"p3MinDisc\":\"0.80\",\"p3MinDiscAdjPrice\":\"27.20\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"23.15%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"false\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:23.15%\\n履约毛利率:23.13%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1451012,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1484069,\"skuSpec\":\"剪刀\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"48.36\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-335.31%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"89.90\",\"originPrice\":\"89.90\",\"performanceFee\":\"67.22\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"280\",\"skuCostNotaxfee\":\"48.34\",\"saleStock\":\"186\",\"skuId\":\"1484070\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"89.10\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-82.13%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"true\",\"shipStock\":\"504\",\"grossMargin\":\"商品毛利率:-82.13%\\n履约毛利率:-335.31%\",\"deadStockPrice\":\"67.43\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1451012,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1484070,\"skuSpec\":\"实木刀座（全桦木）\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"食品酒水二>爆品测试；特色类目>我的世界\",\"itemId\":1156154,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"选品-餐厨-晶彩合金筷\",\"itemStatus\":2,\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"8.56\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-338.81%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"33.32\",\"originPrice\":\"49.00\",\"performanceFee\":\"107.95\",\"itemName\":\"选品-餐厨-晶彩合金筷\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"19\",\"skuCostNotaxfee\":\"9.40\",\"saleStock\":\"247\",\"skuId\":\"1190073\",\"p3MinDisc\":\"0.68\",\"p3MinDiscAdjPrice\":\"32.52\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"67.77%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1156154\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:67.77%\\n履约毛利率:-338.81%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1156154,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1190073,\"skuSpec\":\"晶黑版-6双装\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"22.07\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-452.04%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"33.32\",\"originPrice\":\"49.00\",\"performanceFee\":\"124.50\",\"itemName\":\"选品-餐厨-晶彩合金筷\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"593\",\"skuCostNotaxfee\":\"22.09\",\"saleStock\":\"923\",\"skuId\":\"1190074\",\"p3MinDisc\":\"0.68\",\"p3MinDiscAdjPrice\":\"32.52\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"16.90%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1156154\",\"p3p4\":\"true\",\"shipStock\":\"2962\",\"grossMargin\":\"商品毛利率:16.90%\\n履约毛利率:-452.04%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1156154,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1190074,\"skuSpec\":\"彩虹版-6双装\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"食品酒水二>爆品测试；特色类目>我的世界\",\"itemId\":1142033,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"选品-餐厨炫彩随行吸管杯\",\"itemStatus\":0,\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"31.78\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-26.75%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"31.60\",\"originPrice\":\"79.00\",\"performanceFee\":\"1.88\",\"itemName\":\"选品-餐厨炫彩随行吸管杯\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"31.78\",\"saleStock\":\"0\",\"skuId\":\"1143158\",\"p3MinDisc\":\"0.40\",\"p3MinDiscAdjPrice\":\"30.80\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-19.69%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1142033\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-19.69%\\n履约毛利率:-26.75%\",\"deadStockPrice\":\"31.60\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1142033,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1143158,\"skuSpec\":\"幻冰蓝\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"31.77\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-23.60%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"31.60\",\"originPrice\":\"79.00\",\"performanceFee\":\"1.06\",\"itemName\":\"选品-餐厨炫彩随行吸管杯\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"31.76\",\"saleStock\":\"0\",\"skuId\":\"1143159\",\"p3MinDisc\":\"0.40\",\"p3MinDiscAdjPrice\":\"30.80\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-19.64%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1142033\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-19.64%\\n履约毛利率:-23.60%\",\"deadStockPrice\":\"23.70\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1142033,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1143159,\"skuSpec\":\"冷萄紫\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"33.04\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-32.26%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"31.60\",\"originPrice\":\"79.00\",\"performanceFee\":\"2.09\",\"itemName\":\"选品-餐厨炫彩随行吸管杯\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"33.03\",\"saleStock\":\"0\",\"skuId\":\"1143160\",\"p3MinDisc\":\"0.40\",\"p3MinDiscAdjPrice\":\"30.80\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-24.41%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1142033\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-24.41%\\n履约毛利率:-32.26%\",\"deadStockPrice\":\"31.60\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1142033,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1143160,\"skuSpec\":\"青柠绿\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"31.08\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-22.92%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"31.60\",\"originPrice\":\"79.00\",\"performanceFee\":\"1.56\",\"itemName\":\"选品-餐厨炫彩随行吸管杯\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"31.08\",\"saleStock\":\"0\",\"skuId\":\"1143161\",\"p3MinDisc\":\"0.40\",\"p3MinDiscAdjPrice\":\"30.80\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-17.06%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1142033\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-17.06%\\n履约毛利率:-22.92%\",\"deadStockPrice\":\"31.60\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1142033,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1143161,\"skuSpec\":\"火龙果\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"特色类目>我的世界；食品酒水二>爆品测试\",\"itemId\":1656000,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"选品-海外不锈钢防烫蒸锅\",\"itemStatus\":2,\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"135.28\",\"lowestPrice\":\"209.00\",\"performanceProfitRate\":\"23.05%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"219.39\",\"originPrice\":\"309.00\",\"performanceFee\":\"0.92\",\"itemName\":\"选品-海外不锈钢防烫蒸锅\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"30\",\"skuCostNotaxfee\":\"139.37\",\"saleStock\":\"331\",\"skuId\":\"1717056\",\"p3MinDisc\":\"0.71\",\"p3MinDiscAdjPrice\":\"216.30\",\"saleAmountNoTax\":\"177.00\",\"profitRate\":\"23.57%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1656000\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:23.57%\\n履约毛利率:23.05%\",\"promotion\":\"\",\"realPrice\":\"200\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1656000,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1717056,\"skuSpec\":\"24cm口径/约6.0L容量/有盖/蒸锅\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"162.52\",\"lowestPrice\":\"238.00\",\"performanceProfitRate\":\"8.08%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"247.79\",\"originPrice\":\"349.00\",\"performanceFee\":\"0.18\",\"itemName\":\"选品-海外不锈钢防烫蒸锅\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"29\",\"skuCostNotaxfee\":\"162.51\",\"saleStock\":\"249\",\"skuId\":\"1717057\",\"p3MinDisc\":\"0.71\",\"p3MinDiscAdjPrice\":\"244.30\",\"saleAmountNoTax\":\"177.00\",\"profitRate\":\"8.18%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1656000\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:8.18%\\n履约毛利率:8.08%\",\"promotion\":\"\",\"realPrice\":\"200\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1656000,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1717057,\"skuSpec\":\"28cm口径/约9.0L容量/有盖/蒸格/直火电磁炉通用\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"数码娱乐>美妆>新建分类20170828；食品酒水二>手镯\",\"itemId\":3424027,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"爱媛38号果冻橙 2.5KG（12粒装）\",\"itemStatus\":0,\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"50.00\",\"performanceProfitRate\":\"5.03%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"59.90\",\"originPrice\":\"59.9\",\"performanceFee\":\"2.19\",\"itemName\":\"爱媛38号果冻橙 2.5KG（12粒装）\",\"itemManagerName\":\"葛琳琳\",\"skuCostNotaxfee\":\"50.00\",\"saleStock\":\"0\",\"skuId\":\"3619069\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"59.10\",\"saleAmountNoTax\":\"54.96\",\"profitRate\":\"9.02%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"9.00%\",\"itemId\":\"3424027\",\"p3p4\":\"false\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:9.02%\\n履约毛利率:5.03%\",\"promotion\":\"\",\"realPrice\":\"59.9\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":3424027,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":3619069,\"skuSpec\":\"2.5KG（12粒装）\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"食品酒水二>爆品测试；个护清洁四>周黑鸭；分类长度测试2>周边游戏农药\",\"itemId\":1397017,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"选品-海外-低脂鸡胸肉 180克\",\"itemStatus\":2,\"phyCategory\":\"婴童>婴童服饰>婴儿内衣\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"11.47\",\"lowestPrice\":\"16.80\",\"performanceProfitRate\":\"-1,529.71%\",\"phyCategory\":\"婴童>婴童服饰>婴儿内衣\",\"p3MinDiscPrice\":\"16.51\",\"originPrice\":\"25.80\",\"performanceFee\":\"421.21\",\"itemName\":\"选品-海外-低脂鸡胸肉 180克\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"19\",\"skuCostNotaxfee\":\"11.46\",\"saleStock\":\"3161\",\"skuId\":\"1518066\",\"p3MinDisc\":\"0.64\",\"p3MinDiscAdjPrice\":\"16.21\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"56.83%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1397017\",\"p3p4\":\"false\",\"shipStock\":\"1838\",\"grossMargin\":\"商品毛利率:56.83%\\n履约毛利率:-1,529.71%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1397017,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1518066,\"skuSpec\":\"黑椒味 1克\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"11.26\",\"lowestPrice\":\"15.90\",\"performanceProfitRate\":\"-1,144.04%\",\"phyCategory\":\"婴童>婴童服饰>婴儿内衣\",\"p3MinDiscPrice\":\"16.51\",\"originPrice\":\"25.80\",\"performanceFee\":\"319.03\",\"itemName\":\"选品-海外-低脂鸡胸肉 180克\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"19\",\"skuCostNotaxfee\":\"11.26\",\"saleStock\":\"2692\",\"skuId\":\"1518067\",\"p3MinDisc\":\"0.64\",\"p3MinDiscAdjPrice\":\"16.21\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"57.60%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1397017\",\"p3p4\":\"false\",\"shipStock\":\"1278\",\"grossMargin\":\"商品毛利率:57.60%\\n履约毛利率:-1,144.04%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1397017,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1518067,\"skuSpec\":\"椒麻味 2克\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"\",\"itemId\":1143016,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"全家一周出游，28寸纯PC斜纹拉链拉杆箱\",\"itemStatus\":0,\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"207.47\",\"lowestPrice\":\"207.00\",\"performanceProfitRate\":\"-736.74%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"239.25\",\"originPrice\":\"319.00\",\"performanceFee\":\"14.68\",\"itemName\":\"全家一周出游，28寸纯PC斜纹拉链拉杆箱\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"76\",\"skuCostNotaxfee\":\"184.04\",\"saleStock\":\"148\",\"skuId\":\"1144082\",\"p3MinDisc\":\"0.75\",\"p3MinDiscAdjPrice\":\"236.06\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-681.47%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1143016\",\"p3p4\":\"true\",\"shipStock\":\"50\",\"grossMargin\":\"商品毛利率:-681.47%\\n履约毛利率:-736.74%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1143016,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1144082,\"skuSpec\":\"熠光金\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"187.54\",\"lowestPrice\":\"207.00\",\"performanceProfitRate\":\"33.47%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"207.35\",\"originPrice\":\"319.00\",\"performanceFee\":\"0.28\",\"itemName\":\"全家一周出游，28寸纯PC斜纹拉链拉杆箱\",\"itemManagerName\":\"葛琳琳\",\"skuCostNotaxfee\":\"166.84\",\"saleStock\":\"1\",\"skuId\":\"1144083\",\"p3MinDisc\":\"0.65\",\"p3MinDiscAdjPrice\":\"204.16\",\"saleAmountNoTax\":\"282.31\",\"profitRate\":\"33.57%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1143016\",\"p3p4\":\"false\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:33.57%\\n履约毛利率:33.47%\",\"deadStockPrice\":\"207.35\",\"promotion\":\"\",\"realPrice\":\"319\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1143016,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1144083,\"skuSpec\":\"漫纱粉\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"207.47\",\"lowestPrice\":\"207.00\",\"performanceProfitRate\":\"20.15%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"239.25\",\"originPrice\":\"319\",\"performanceFee\":\"17.94\",\"itemName\":\"全家一周出游，28寸纯PC斜纹拉链拉杆箱\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"71\",\"skuCostNotaxfee\":\"184.33\",\"saleStock\":\"386\",\"skuId\":\"1144084\",\"p3MinDisc\":\"0.75\",\"p3MinDiscAdjPrice\":\"236.06\",\"saleAmountNoTax\":\"282.31\",\"profitRate\":\"26.51%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1143016\",\"p3p4\":\"false\",\"shipStock\":\"130\",\"grossMargin\":\"商品毛利率:26.51%\\n履约毛利率:20.15%\",\"promotion\":\"\",\"realPrice\":\"319\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1143016,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1144084,\"skuSpec\":\"悠辰蓝\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"特色类目>我的世界\",\"itemId\":1051002,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"选品-海外-Carat钻石汤锅24商品名称1改2行\",\"itemStatus\":2,\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"107.33\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"59.40%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"179.40\",\"originPrice\":\"299\",\"performanceFee\":\"0.11\",\"itemName\":\"选品-海外-Carat钻石汤锅24商品名称1改2行\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"107.32\",\"saleStock\":\"0\",\"skuId\":\"1052005\",\"p3MinDisc\":\"0.60\",\"p3MinDiscAdjPrice\":\"176.41\",\"saleAmountNoTax\":\"264.61\",\"profitRate\":\"59.44%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1051002\",\"p3p4\":\"false\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:59.44%\\n履约毛利率:59.40%\",\"deadStockPrice\":\"89.70\",\"promotion\":\"\",\"realPrice\":\"299\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1051002,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1052005,\"skuSpec\":\"红\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0},{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"114.21\",\"lowestPrice\":\"161.50\",\"performanceProfitRate\":\"-330.31%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"179.40\",\"originPrice\":\"299.00\",\"performanceFee\":\"0.04\",\"itemName\":\"选品-海外-Carat钻石汤锅24商品名称1改2行\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"114.21\",\"saleStock\":\"0\",\"skuId\":\"1052006\",\"p3MinDisc\":\"0.60\",\"p3MinDiscAdjPrice\":\"176.41\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-330.19%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1051002\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-330.19%\\n履约毛利率:-330.31%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1051002,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1052006,\"skuSpec\":\"绿\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]},{\"bu\":{\"$ref\":\"$[0].bu\"},\"buManager\":\"grp.gyhtest1007@corp.netease.com\",\"buManagerName\":\"严选内部系统\",\"buOperator\":\"grp.yxtest8@corp.netease.com\",\"buOperatorName\":\"葛琳琳\",\"category\":\"NBA>西部；特色类目>我的世界；数码娱乐>美妆>新建分类201708281；分类长度测试2>游戏周边暗黑\",\"itemId\":1006002,\"itemManager\":\"grp.yxtest6@corp.netease.com\",\"itemManagerName\":\"葛琳琳\",\"itemName\":\"选品-海外-轻奢纯棉刺绣水洗四件套\",\"itemStatus\":2,\"phyCategory\":\"家庭清洁>清洁用品>衣物清洁>洗衣用剂\",\"skuList\":[{\"actReportPlayId\":0,\"attrMap\":{\"noTaxCost\":\"363.25\",\"lowestPrice\":\"449.50\",\"performanceProfitRate\":\"-1,294.87%\",\"phyCategory\":\"家庭清洁>清洁用品>衣物清洁>洗衣用剂\",\"p3MinDiscPrice\":\"584.35\",\"originPrice\":\"899.00\",\"performanceFee\":\"7.08\",\"itemName\":\"选品-海外-轻奢纯棉刺绣水洗四件套\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"363.25\",\"saleStock\":\"0\",\"skuId\":\"1006003\",\"p3MinDisc\":\"0.65\",\"p3MinDiscAdjPrice\":\"575.36\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-1,268.24%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1006002\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-1,268.24%\\n履约毛利率:-1,294.87%\",\"deadStockPrice\":\"269.70\",\"promotion\":\"\",\"realPrice\":\"30\"},\"auditStatus\":0,\"createTime\":0,\"id\":0,\"itemId\":1006002,\"opsAuditStatus\":0,\"selectStatus\":0,\"skuId\":1006003,\"skuSpec\":\"水洗刺绣\",\"source\":0,\"status\":1,\"updateSource\":0,\"updateTime\":0}]}]";
-        String sku ="[{\"attrMap\":{\"noTaxCost\":\"135.28\",\"lowestPrice\":\"209.00\",\"performanceProfitRate\":\"23.05%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"219.39\",\"originPrice\":\"309.00\",\"performanceFee\":\"0.92\",\"itemName\":\"选品-海外不锈钢防烫蒸锅\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"30\",\"skuCostNotaxfee\":\"139.37\",\"saleStock\":\"331\",\"skuId\":\"1717056\",\"p3MinDisc\":\"0.71\",\"p3MinDiscAdjPrice\":\"216.30\",\"saleAmountNoTax\":\"177.00\",\"profitRate\":\"23.57%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1656000\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:23.57%\\n履约毛利率:23.05%\",\"promotion\":\"\",\"realPrice\":\"200\"},\"skuId\":1717056},{\"attrMap\":{\"noTaxCost\":\"162.52\",\"lowestPrice\":\"238.00\",\"performanceProfitRate\":\"8.08%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"247.79\",\"originPrice\":\"349.00\",\"performanceFee\":\"0.18\",\"itemName\":\"选品-海外不锈钢防烫蒸锅\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"29\",\"skuCostNotaxfee\":\"162.51\",\"saleStock\":\"249\",\"skuId\":\"1717057\",\"p3MinDisc\":\"0.71\",\"p3MinDiscAdjPrice\":\"244.30\",\"saleAmountNoTax\":\"177.00\",\"profitRate\":\"8.18%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1656000\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:8.18%\\n履约毛利率:8.08%\",\"promotion\":\"\",\"realPrice\":\"200\"},\"skuId\":1717057},{\"attrMap\":{\"noTaxCost\":\"627.08\",\"lowestPrice\":\"879.00\",\"performanceProfitRate\":\"-264.44%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"923.16\",\"originPrice\":\"1099.00\",\"performanceFee\":\"17.95\",\"itemName\":\"选品-海外-北欧休闲摇椅\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"627.07\",\"saleStock\":\"0\",\"skuId\":\"1705129\",\"p3MinDisc\":\"0.84\",\"p3MinDiscAdjPrice\":\"912.17\",\"saleAmountNoTax\":\"177.00\",\"profitRate\":\"-254.29%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1650028\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-254.29%\\n履约毛利率:-264.44%\",\"promotion\":\"\",\"realPrice\":\"200\"},\"skuId\":1705129},{\"attrMap\":{\"noTaxCost\":\"635.35\",\"lowestPrice\":\"879.00\",\"performanceProfitRate\":\"-269.11%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"923.16\",\"originPrice\":\"1099.00\",\"performanceFee\":\"17.95\",\"itemName\":\"选品-海外-北欧休闲摇椅\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"635.34\",\"saleStock\":\"0\",\"skuId\":\"1705130\",\"p3MinDisc\":\"0.84\",\"p3MinDiscAdjPrice\":\"912.17\",\"saleAmountNoTax\":\"177.00\",\"profitRate\":\"-258.97%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1650028\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-258.97%\\n履约毛利率:-269.11%\",\"promotion\":\"\",\"realPrice\":\"200\"},\"skuId\":1705130},{\"attrMap\":{\"noTaxCost\":\"26.20\",\"lowestPrice\":\"49.90\",\"performanceProfitRate\":\"-445.10%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"59.90\",\"originPrice\":\"59.90\",\"performanceFee\":\"118.53\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"28\",\"skuCostNotaxfee\":\"26.19\",\"saleStock\":\"160\",\"skuId\":\"1484065\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"59.10\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"1.33%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"true\",\"shipStock\":\"2168\",\"grossMargin\":\"商品毛利率:1.33%\\n履约毛利率:-445.10%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1484065},{\"attrMap\":{\"noTaxCost\":\"30.10\",\"lowestPrice\":\"37.40\",\"performanceProfitRate\":\"-415.94%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"49.90\",\"originPrice\":\"49.90\",\"performanceFee\":\"106.88\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"135\",\"skuCostNotaxfee\":\"30.05\",\"saleStock\":\"877\",\"skuId\":\"1484066\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"49.10\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-13.37%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-13.37%\\n履约毛利率:-415.94%\",\"deadStockPrice\":\"37.43\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1484066},{\"attrMap\":{\"noTaxCost\":\"19.69\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-303.58%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"44.90\",\"originPrice\":\"44.90\",\"performanceFee\":\"87.47\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"72\",\"skuCostNotaxfee\":\"19.68\",\"saleStock\":\"813\",\"skuId\":\"1484067\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"44.10\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"25.87%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:25.87%\\n履约毛利率:-303.58%\",\"deadStockPrice\":\"31.43\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1484067},{\"attrMap\":{\"noTaxCost\":\"9.83\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-204.83%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"24.90\",\"originPrice\":\"24.90\",\"performanceFee\":\"71.11\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"78\",\"skuCostNotaxfee\":\"9.82\",\"saleStock\":\"593\",\"skuId\":\"1484068\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"24.60\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"63.00%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"false\",\"shipStock\":\"1536\",\"grossMargin\":\"商品毛利率:63.00%\\n履约毛利率:-204.83%\",\"deadStockPrice\":\"17.43\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1484068},{\"attrMap\":{\"noTaxCost\":\"20.41\",\"lowestPrice\":\"27.00\",\"performanceProfitRate\":\"23.13%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"28.00\",\"originPrice\":\"35.00\",\"performanceFee\":\"0.01\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"11850\",\"skuCostNotaxfee\":\"20.40\",\"saleStock\":\"375\",\"skuId\":\"1484069\",\"p3MinDisc\":\"0.80\",\"p3MinDiscAdjPrice\":\"27.20\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"23.15%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"false\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:23.15%\\n履约毛利率:23.13%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1484069},{\"attrMap\":{\"noTaxCost\":\"48.36\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-335.31%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"89.90\",\"originPrice\":\"89.90\",\"performanceFee\":\"67.22\",\"itemName\":\"选品-餐厨--德式不锈钢刀系列-6款\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"280\",\"skuCostNotaxfee\":\"48.34\",\"saleStock\":\"186\",\"skuId\":\"1484070\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"89.10\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-82.13%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1451012\",\"p3p4\":\"true\",\"shipStock\":\"504\",\"grossMargin\":\"商品毛利率:-82.13%\\n履约毛利率:-335.31%\",\"deadStockPrice\":\"67.43\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1484070},{\"attrMap\":{\"noTaxCost\":\"11.47\",\"lowestPrice\":\"16.80\",\"performanceProfitRate\":\"-1,529.71%\",\"phyCategory\":\"婴童>婴童服饰>婴儿内衣\",\"p3MinDiscPrice\":\"16.51\",\"originPrice\":\"25.80\",\"performanceFee\":\"421.21\",\"itemName\":\"选品-海外-低脂鸡胸肉 180克\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"19\",\"skuCostNotaxfee\":\"11.46\",\"saleStock\":\"3161\",\"skuId\":\"1518066\",\"p3MinDisc\":\"0.64\",\"p3MinDiscAdjPrice\":\"16.21\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"56.83%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1397017\",\"p3p4\":\"false\",\"shipStock\":\"1838\",\"grossMargin\":\"商品毛利率:56.83%\\n履约毛利率:-1,529.71%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1518066},{\"attrMap\":{\"noTaxCost\":\"11.26\",\"lowestPrice\":\"15.90\",\"performanceProfitRate\":\"-1,144.04%\",\"phyCategory\":\"婴童>婴童服饰>婴儿内衣\",\"p3MinDiscPrice\":\"16.51\",\"originPrice\":\"25.80\",\"performanceFee\":\"319.03\",\"itemName\":\"选品-海外-低脂鸡胸肉 180克\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"19\",\"skuCostNotaxfee\":\"11.26\",\"saleStock\":\"2692\",\"skuId\":\"1518067\",\"p3MinDisc\":\"0.64\",\"p3MinDiscAdjPrice\":\"16.21\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"57.60%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1397017\",\"p3p4\":\"false\",\"shipStock\":\"1278\",\"grossMargin\":\"商品毛利率:57.60%\\n履约毛利率:-1,144.04%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1518067},{\"attrMap\":{\"noTaxCost\":\"8.56\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-338.81%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"33.32\",\"originPrice\":\"49.00\",\"performanceFee\":\"107.95\",\"itemName\":\"选品-餐厨-晶彩合金筷\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"19\",\"skuCostNotaxfee\":\"9.40\",\"saleStock\":\"247\",\"skuId\":\"1190073\",\"p3MinDisc\":\"0.68\",\"p3MinDiscAdjPrice\":\"32.52\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"67.77%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1156154\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:67.77%\\n履约毛利率:-338.81%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1190073},{\"attrMap\":{\"noTaxCost\":\"22.07\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-452.04%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"33.32\",\"originPrice\":\"49.00\",\"performanceFee\":\"124.50\",\"itemName\":\"选品-餐厨-晶彩合金筷\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"593\",\"skuCostNotaxfee\":\"22.09\",\"saleStock\":\"923\",\"skuId\":\"1190074\",\"p3MinDisc\":\"0.68\",\"p3MinDiscAdjPrice\":\"32.52\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"16.90%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1156154\",\"p3p4\":\"true\",\"shipStock\":\"2962\",\"grossMargin\":\"商品毛利率:16.90%\\n履约毛利率:-452.04%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1190074},{\"attrMap\":{\"noTaxCost\":\"31.78\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-26.75%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"31.60\",\"originPrice\":\"79.00\",\"performanceFee\":\"1.88\",\"itemName\":\"选品-餐厨炫彩随行吸管杯\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"31.78\",\"saleStock\":\"0\",\"skuId\":\"1143158\",\"p3MinDisc\":\"0.40\",\"p3MinDiscAdjPrice\":\"30.80\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-19.69%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1142033\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-19.69%\\n履约毛利率:-26.75%\",\"deadStockPrice\":\"31.60\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1143158},{\"attrMap\":{\"noTaxCost\":\"31.77\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-23.60%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"31.60\",\"originPrice\":\"79.00\",\"performanceFee\":\"1.06\",\"itemName\":\"选品-餐厨炫彩随行吸管杯\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"31.76\",\"saleStock\":\"0\",\"skuId\":\"1143159\",\"p3MinDisc\":\"0.40\",\"p3MinDiscAdjPrice\":\"30.80\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-19.64%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1142033\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-19.64%\\n履约毛利率:-23.60%\",\"deadStockPrice\":\"23.70\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1143159},{\"attrMap\":{\"noTaxCost\":\"33.04\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-32.26%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"31.60\",\"originPrice\":\"79.00\",\"performanceFee\":\"2.09\",\"itemName\":\"选品-餐厨炫彩随行吸管杯\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"33.03\",\"saleStock\":\"0\",\"skuId\":\"1143160\",\"p3MinDisc\":\"0.40\",\"p3MinDiscAdjPrice\":\"30.80\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-24.41%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1142033\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-24.41%\\n履约毛利率:-32.26%\",\"deadStockPrice\":\"31.60\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1143160},{\"attrMap\":{\"noTaxCost\":\"31.08\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"-22.92%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"31.60\",\"originPrice\":\"79.00\",\"performanceFee\":\"1.56\",\"itemName\":\"选品-餐厨炫彩随行吸管杯\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"31.08\",\"saleStock\":\"0\",\"skuId\":\"1143161\",\"p3MinDisc\":\"0.40\",\"p3MinDiscAdjPrice\":\"30.80\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-17.06%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1142033\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-17.06%\\n履约毛利率:-22.92%\",\"deadStockPrice\":\"31.60\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1143161},{\"attrMap\":{\"noTaxCost\":\"107.33\",\"lowestPrice\":\"0.00\",\"performanceProfitRate\":\"59.40%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"179.40\",\"originPrice\":\"299\",\"performanceFee\":\"0.11\",\"itemName\":\"选品-海外-Carat钻石汤锅24商品名称1改2行\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"107.32\",\"saleStock\":\"0\",\"skuId\":\"1052005\",\"p3MinDisc\":\"0.60\",\"p3MinDiscAdjPrice\":\"176.41\",\"saleAmountNoTax\":\"264.61\",\"profitRate\":\"59.44%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1051002\",\"p3p4\":\"false\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:59.44%\\n履约毛利率:59.40%\",\"deadStockPrice\":\"89.70\",\"promotion\":\"\",\"realPrice\":\"299\"},\"skuId\":1052005},{\"attrMap\":{\"noTaxCost\":\"114.21\",\"lowestPrice\":\"161.50\",\"performanceProfitRate\":\"-330.31%\",\"phyCategory\":\"美妆个护>口腔护理>洁面\",\"p3MinDiscPrice\":\"179.40\",\"originPrice\":\"299.00\",\"performanceFee\":\"0.04\",\"itemName\":\"选品-海外-Carat钻石汤锅24商品名称1改2行\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"114.21\",\"saleStock\":\"0\",\"skuId\":\"1052006\",\"p3MinDisc\":\"0.60\",\"p3MinDiscAdjPrice\":\"176.41\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-330.19%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1051002\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-330.19%\\n履约毛利率:-330.31%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1052006},{\"attrMap\":{\"noTaxCost\":\"363.25\",\"lowestPrice\":\"449.50\",\"performanceProfitRate\":\"-1,294.87%\",\"phyCategory\":\"家庭清洁>清洁用品>衣物清洁>洗衣用剂\",\"p3MinDiscPrice\":\"584.35\",\"originPrice\":\"899.00\",\"performanceFee\":\"7.08\",\"itemName\":\"选品-海外-轻奢纯棉刺绣水洗四件套\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"0\",\"skuCostNotaxfee\":\"363.25\",\"saleStock\":\"0\",\"skuId\":\"1006003\",\"p3MinDisc\":\"0.65\",\"p3MinDiscAdjPrice\":\"575.36\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-1,268.24%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1006002\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:-1,268.24%\\n履约毛利率:-1,294.87%\",\"deadStockPrice\":\"269.70\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1006003},{\"attrMap\":{\"noTaxCost\":\"50.00\",\"performanceProfitRate\":\"5.03%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"59.90\",\"originPrice\":\"59.9\",\"performanceFee\":\"2.19\",\"itemName\":\"爱媛38号果冻橙 2.5KG（12粒装）\",\"itemManagerName\":\"葛琳琳\",\"skuCostNotaxfee\":\"50.00\",\"saleStock\":\"0\",\"skuId\":\"3619069\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"59.10\",\"saleAmountNoTax\":\"54.96\",\"profitRate\":\"9.02%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"9.00%\",\"itemId\":\"3424027\",\"p3p4\":\"false\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:9.02%\\n履约毛利率:5.03%\",\"promotion\":\"\",\"realPrice\":\"59.9\"},\"skuId\":3619069},{\"attrMap\":{\"noTaxCost\":\"18.59\",\"lowestPrice\":\"59.00\",\"performanceProfitRate\":\"27.65%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"79.00\",\"originPrice\":\"79.00\",\"performanceFee\":\"0.63\",\"itemName\":\"给戒指一个家，动物乐园系列戒托\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"29\",\"skuCostNotaxfee\":\"48.94\",\"saleStock\":\"31\",\"skuId\":\"1555045\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"78.20\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"30.00%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1260050\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:30.00%\\n履约毛利率:27.65%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1555045},{\"attrMap\":{\"noTaxCost\":\"18.59\",\"lowestPrice\":\"59.00\",\"performanceProfitRate\":\"29.67%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"79.00\",\"originPrice\":\"79.00\",\"performanceFee\":\"0.09\",\"itemName\":\"给戒指一个家，动物乐园系列戒托\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"252\",\"skuCostNotaxfee\":\"47.67\",\"saleStock\":\"118\",\"skuId\":\"1555046\",\"p3MinDisc\":\"1.00\",\"p3MinDiscAdjPrice\":\"78.20\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"30.00%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1260050\",\"p3p4\":\"true\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:30.00%\\n履约毛利率:29.67%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1555046},{\"attrMap\":{\"noTaxCost\":\"207.47\",\"lowestPrice\":\"207.00\",\"performanceProfitRate\":\"-736.74%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"239.25\",\"originPrice\":\"319.00\",\"performanceFee\":\"14.68\",\"itemName\":\"全家一周出游，28寸纯PC斜纹拉链拉杆箱\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"76\",\"skuCostNotaxfee\":\"184.04\",\"saleStock\":\"148\",\"skuId\":\"1144082\",\"p3MinDisc\":\"0.75\",\"p3MinDiscAdjPrice\":\"236.06\",\"saleAmountNoTax\":\"26.55\",\"profitRate\":\"-681.47%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1143016\",\"p3p4\":\"true\",\"shipStock\":\"50\",\"grossMargin\":\"商品毛利率:-681.47%\\n履约毛利率:-736.74%\",\"promotion\":\"\",\"realPrice\":\"30\"},\"skuId\":1144082},{\"attrMap\":{\"noTaxCost\":\"187.54\",\"lowestPrice\":\"207.00\",\"performanceProfitRate\":\"33.47%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"207.35\",\"originPrice\":\"319.00\",\"performanceFee\":\"0.28\",\"itemName\":\"全家一周出游，28寸纯PC斜纹拉链拉杆箱\",\"itemManagerName\":\"葛琳琳\",\"skuCostNotaxfee\":\"166.84\",\"saleStock\":\"1\",\"skuId\":\"1144083\",\"p3MinDisc\":\"0.65\",\"p3MinDiscAdjPrice\":\"204.16\",\"saleAmountNoTax\":\"282.31\",\"profitRate\":\"33.57%\",\"isDeadStock\":\"是\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1143016\",\"p3p4\":\"false\",\"shipStock\":\"0\",\"grossMargin\":\"商品毛利率:33.57%\\n履约毛利率:33.47%\",\"deadStockPrice\":\"207.35\",\"promotion\":\"\",\"realPrice\":\"319\"},\"skuId\":1144083},{\"attrMap\":{\"noTaxCost\":\"207.47\",\"lowestPrice\":\"207.00\",\"performanceProfitRate\":\"20.15%\",\"phyCategory\":\"美妆个护>面部护理>化妆水\",\"p3MinDiscPrice\":\"239.25\",\"originPrice\":\"319\",\"performanceFee\":\"17.94\",\"itemName\":\"全家一周出游，28寸纯PC斜纹拉链拉杆箱\",\"itemManagerName\":\"葛琳琳\",\"turnOverDays\":\"71\",\"skuCostNotaxfee\":\"184.33\",\"saleStock\":\"386\",\"skuId\":\"1144084\",\"p3MinDisc\":\"0.75\",\"p3MinDiscAdjPrice\":\"236.06\",\"saleAmountNoTax\":\"282.31\",\"profitRate\":\"26.51%\",\"isDeadStock\":\"否\",\"invoiceRate\":\"13.00%\",\"itemId\":\"1143016\",\"p3p4\":\"false\",\"shipStock\":\"130\",\"grossMargin\":\"商品毛利率:26.51%\\n履约毛利率:20.15%\",\"promotion\":\"\",\"realPrice\":\"319\"},\"skuId\":1144084}]\n";
-        sort(before,sku);
-    }
-    public static void  sort(String str,String sku){
-        List<ActReportPlayItemTO> playItemList = JSON.parseArray(str,ActReportPlayItemTO.class);
-        List<ActReportPlaySkuBasicTO> skuList = JSON.parseArray(sku,ActReportPlaySkuBasicTO.class);
-        Map<Long, ActReportPlaySkuBasicTO> actReportPlaySkuAttrMapMap = skuList
-                .stream()
-                .collect(Collectors.toMap(ActReportPlaySkuBasicTO::getSkuId,
-                        actReportPlaySkuAttrMap -> actReportPlaySkuAttrMap));
-        Set<Long> itemIdSet = new HashSet<>();
-        Map<Long, ActReportPlayItemTO> playItemMap = playItemList.stream()
-                .collect(Collectors.toMap(ActReportPlayItemTO::getItemId, Function.identity()));
-        actReportPlaySkuAttrMapMap.forEach((skuId, map) -> {
-            //
-            Long itemId = Long.parseLong(map.getAttrMap().get("itemId"));
-            if (!itemIdSet.contains(itemId)) {
-                itemIdSet.add(itemId);
-                //判断sku是否破价
-                if (map.getAttrMap().get("p3p4").equals("true")) {
-                    //如果破价，将item放到list最前面
-                    ActReportPlayItemTO item = playItemMap.get(itemId);
-                    if (item != null) {
-                        int oldIndex = playItemList.indexOf(item);
-                        if (oldIndex != -1) {
-                            playItemList.remove(oldIndex);
-                            playItemList.add(0, item);
-                            System.out.println(itemId+"破价,index="+oldIndex);
-                        }
-                    }
+        RedisUtil redisUtil = new RedisUtil();
+        redisUtil.set("test","target",1);
+        String result = (String)redisUtil.get("test",1);
+        System.out.println(result);
+        List<Long> target = new ArrayList<>();
+        target.add(0L);
+        target.add(1L);
+        testc testc1 = new testc();
+        testc testc2 = new testc();
+        testc testc3 = new testc();
+        testc testc4 = new testc();
+        testc1.setId(0L);
+        testc2.setId(1L);
+        testc3.setId(2L);
+        testc4.setId(3L);
+        List<testc> list = Lists.newArrayList(testc1,testc2,testc3,testc4);
+        for(int i = 0; i< target.size(); i++){
+            for(testc item:list){
+                if(item.getId() == target.get(i)){
+                    list.remove(item);
+                    list.add(0,item);
+                    break;
                 }
             }
-        });
+        }
+        System.out.println(JSON.toJSONString(list));
+        String jsonSource = "[{\"id\":1,\"sex\":1},{\"id\":0,\"sex\":2},{\"id\":2},{\"id\":3}]";
+        List<testc> list1 = JSON.parseArray(jsonSource,testc.class);
+        System.out.println(list1);
+    }
+    private static class testc{
+        private long id;
+        private String name;
+
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
     }
 }
