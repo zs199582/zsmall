@@ -28,8 +28,6 @@
     <list default="true" id="7b08acc8-ecb3-4cab-9bfb-fe9a694f8cf6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zsmall/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zsmall/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/Start$testc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/Start$testc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/Start.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,6 +353,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1085" y="405" key="#com.intellij.ide.util.MemberChooser/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592924560020" />
+    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1593090826217">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1593090826217" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588037926678">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -420,10 +422,10 @@
     </state>
     <state width="968" height="113" key="XDebugger.FullValuePopup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874709087" />
     <state width="1291" height="153" key="XDebugger.FullValuePopup/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592038550865" />
-    <state x="1040" y="412" key="git4idea.branch.GitSmartOperationDialog" timestamp="1593087894810">
+    <state x="1040" y="412" key="git4idea.branch.GitSmartOperationDialog" timestamp="1593090358553">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1040" y="412" key="git4idea.branch.GitSmartOperationDialog/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1593087894810" />
+    <state x="1040" y="412" key="git4idea.branch.GitSmartOperationDialog/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1593090358553" />
     <state x="2143" y="540" width="672" height="678" key="search.everywhere.popup" timestamp="1592664140654">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -436,11 +438,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/zsmall/controller/OrderController.java</url>
           <line>33</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zsmall/Start.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
