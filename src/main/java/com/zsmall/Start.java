@@ -30,31 +30,6 @@ public class Start {
         redisUtil.set("test","target",1);
         String result = (String)redisUtil.get("test",1);
         System.out.println(result);
-        List<Long> target = new ArrayList<>();
-        target.add(0L);
-        target.add(1L);
-        testc testc1 = new testc();
-        testc testc2 = new testc();
-        testc testc3 = new testc();
-        testc testc4 = new testc();
-        testc1.setId(0L);
-        testc2.setId(1L);
-        testc3.setId(2L);
-        testc4.setId(3L);
-        List<testc> list = Lists.newArrayList(testc1,testc2,testc3,testc4);
-        for(int i = 0; i< target.size(); i++){
-            for(testc item:list){
-                if(item.getId() == target.get(i)){
-                    list.remove(item);
-                    list.add(0,item);
-                    break;
-                }
-            }
-        }
-        System.out.println(JSON.toJSONString(list));
-        String jsonSource = "[{\"id\":1,\"sex\":1},{\"id\":0,\"sex\":2},{\"id\":2},{\"id\":3}]";
-        List<testc> list1 = JSON.parseArray(jsonSource,testc.class);
-        System.out.println(list1);
     }
     private static class testc{
         private long id;
