@@ -1,5 +1,6 @@
 package com.zsmall.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.zsmall.Error.EmServiceError;
 import com.zsmall.Error.ServiceException;
 import com.zsmall.dataobject.ItemDO;
@@ -8,6 +9,7 @@ import com.zsmall.service.ItemService;
 import com.zsmall.service.model.CartModel;
 import com.zsmall.service.model.ItemModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -36,6 +39,9 @@ public class ItemController {
     @Autowired
     private HttpServletRequest httpServletRequest;
 
+    @Resource
+    private RedisTemplate redisTemplate;
+
 
     //获取所有商品
     @RequestMapping("/portal")
@@ -50,11 +56,15 @@ public class ItemController {
     @RequestMapping("/show")
     @ResponseBody
     public CommonReturnType getItemFromId(@RequestParam(value = "id")String id){
-        ItemModel item = itemService.getItemFromId(id);
-        if(item == null){
+        ItemModel itemModel = (ItemModel) redisTemplate.opsForValue().get("item_"+id);
+        if(itemModel == null){
+             itemModel = itemService.getItemFromId(id);
+             redisTemplate.opsForValue().set("item_"+id, itemModel);
+        }
+        if(itemModel == null){
             return CommonReturnType.create(EmServiceError.ITEM_EDIT_FAIL,"fail");
         }
-        return CommonReturnType.create(item);
+        return CommonReturnType.create(itemModel);
     }
 
     //新增商品

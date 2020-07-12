@@ -30,10 +30,10 @@ public class JobConfig {
         return JobBuilder.newJob(PrintJob.class).withIdentity("testQuartz").storeDurably().build();
     }
 
-    @Bean(name = "jobTrigger")
-    public Trigger quartzTrigger(){
-        SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(Integer.parseInt(jobSchedule)).repeatForever();
-        //返回trigger 注册job 注册调度周期
-        return TriggerBuilder.newTrigger().forJob(getQuartzDetail()).withIdentity("testQuartz").withSchedule(scheduleBuilder).build();
-    }
+//    @Bean(name = "jobTrigger")
+//    public Trigger quartzTrigger(){
+//        SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(Integer.parseInt(jobSchedule)).repeatForever();
+//        //返回trigger 注册job 注册调度周期
+//        return TriggerBuilder.newTrigger().forJob(getQuartzDetail()).withIdentity("testQuartz").withSchedule(scheduleBuilder).build();
+//    }
 }

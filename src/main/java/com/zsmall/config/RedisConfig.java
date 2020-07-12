@@ -1,11 +1,16 @@
 package com.zsmall.config;
 
+import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
+import com.fasterxml.jackson.databind.ser.std.StdKeySerializers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
@@ -65,6 +70,19 @@ public class RedisConfig{
             LOGGER.error("redis连接池初始化失败 e=",ex);
             return null;
         }
+    }
+
+    @Bean
+    public RedisTemplate getRedisTemplate(RedisConnectionFactory redisConnectionFactory){
+        RedisTemplate redisTemplate = new RedisTemplate();
+        StringRedisSerializer stringKeySerializer = new StringRedisSerializer();
+        redisTemplate.setKeySerializer(stringKeySerializer);
+
+        FastJsonRedisSerializer fastJsonRedisSerializer = new FastJsonRedisSerializer(Object.class);
+        redisTemplate.setValueSerializer(fastJsonRedisSerializer);
+
+        redisTemplate.setConnectionFactory(redisConnectionFactory);
+        return redisTemplate;
     }
 
 

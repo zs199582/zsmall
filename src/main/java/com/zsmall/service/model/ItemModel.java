@@ -1,9 +1,10 @@
 package com.zsmall.service.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 //商品模型
-public class ItemModel {
+public class ItemModel implements Serializable {
 
     /**
      * 商品id
