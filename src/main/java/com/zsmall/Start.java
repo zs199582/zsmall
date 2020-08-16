@@ -4,10 +4,10 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.BeforeFilter;
 import com.google.common.collect.Lists;
-import com.zsmall.util.RedisUtil;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,16 +20,13 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @SpringBootApplication(scanBasePackages = "com.zsmall")
+@EnableConfigurationProperties
 @RestController
 @MapperScan("com.zsmall.dao")
 public class Start {
 
     public static void main(String[] args) {
         SpringApplication.run(Start.class,args);
-        RedisUtil redisUtil = new RedisUtil();
-        redisUtil.set("test","target",1);
-        String result = (String)redisUtil.get("test",1);
-        System.out.println(result);
     }
     private static class testc{
         private long id;

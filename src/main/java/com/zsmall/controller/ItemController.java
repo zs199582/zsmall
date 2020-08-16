@@ -3,6 +3,7 @@ package com.zsmall.controller;
 import com.alibaba.fastjson.JSON;
 import com.zsmall.Error.EmServiceError;
 import com.zsmall.Error.ServiceException;
+import com.zsmall.annotation.Log;
 import com.zsmall.dataobject.ItemDO;
 import com.zsmall.response.CommonReturnType;
 import com.zsmall.service.ItemService;
@@ -12,10 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
@@ -34,14 +32,31 @@ import java.util.Map;
 @Controller
 @RequestMapping("/item")
 public class ItemController {
+
     @Autowired
     private ItemService itemService;
+
     @Autowired
     private HttpServletRequest httpServletRequest;
 
-    @Resource
+    @Autowired
     private RedisTemplate redisTemplate;
 
+//    @Resource
+//    private RedisTemplate redisTemplate;
+
+//    @Resource
+//    private CommonCacheService commonCacheService;
+
+    //获取所有商品
+    @RequestMapping("/")
+    @ResponseBody
+    @Log
+    public CommonReturnType getIndex(){
+        ItemModel[] items = itemService.getItems();
+        return CommonReturnType.create(items);
+//        return items;
+    }
 
     //获取所有商品
     @RequestMapping("/portal")
@@ -55,6 +70,7 @@ public class ItemController {
     //根据商品id 获取商品详细信息
     @RequestMapping("/show")
     @ResponseBody
+    @Log
     public CommonReturnType getItemFromId(@RequestParam(value = "id")String id){
         ItemModel itemModel = (ItemModel) redisTemplate.opsForValue().get("item_"+id);
         if(itemModel == null){

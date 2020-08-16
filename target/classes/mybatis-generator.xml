@@ -28,7 +28,7 @@
         </javaClientGenerator>
 
         <!--生成对应表及类名-->
-        <table tableName="user_info" domainObjectName="UserDO" enableCountByExample="false" enableUpdateByExample="false"
+        <table tableName="SYS_LOG" domainObjectName="SysLogDO" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
     </context>
 </generatorConfiguration>

@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 //商品模型
 public class ItemModel implements Serializable {
 
+    private static String test = "test";
     /**
      * 商品id
      */

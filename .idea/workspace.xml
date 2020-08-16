@@ -20,14 +20,796 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:dev" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b08acc8-ecb3-4cab-9bfb-fe9a694f8cf6" name="Default Changelist" comment="">
+    <list default="true" id="a0efd036-2ff9-4e62-a352-3c423f73a83a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zsmall/annotation/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zsmall/aspect/LogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zsmall/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zsmall/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zsmall/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zsmall/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zsmall/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zsmall/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zsmall/service/model/ItemModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zsmall/service/model/ItemModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zsmall/util/RedisUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-generator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/zhangshuo.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/Error/CommonError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/Error/CommonError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/Error/EmServiceError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/Error/EmServiceError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/Error/ServiceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/Error/ServiceException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/Start$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/Start$testc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/Start$testc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/config/DrmItemConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/config/DrmItemConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/config/JobConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/config/JobConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/config/PropertiesConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/config/PropertiesConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/config/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/controller/ItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/dao/ItemDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/dao/ItemDOMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/dao/OrderDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/dao/OrderDOMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/dao/UserDOMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/dao/UserDOMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/dataobject/ItemDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/dataobject/ItemDO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/dataobject/OrderDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/dataobject/OrderDO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/dataobject/UserDO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/dataobject/UserDO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/job/PrintJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/job/PrintJob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/response/CommonReturnType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/response/CommonReturnType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/ItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/CartModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/CartModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/FinacialModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/FinacialModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/ItemModel$InnerData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/ItemModel$InnerData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/ItemModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/ItemModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/OrderModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/OrderModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/model/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/serviceImpl/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/serviceImpl/ItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/serviceImpl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/serviceImpl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/service/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zsmall/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zsmall/util/RedisUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/ItemDOMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/ItemDOMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-generator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-generator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/Home/OrderList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/Home/OrderList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.zsmall.test.ItemServiceImplTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.zsmall.test.ItemServiceImplTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/Error/CommonError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/Error/EmServiceError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/Error/ServiceException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/Start.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/controller/CartController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/controller/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/controller/ItemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/dao/ItemDOMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/dao/OrderDOMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/dao/UserDOMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/dataobject/ItemDO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/dataobject/OrderDO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/dataobject/UserDO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/response/CommonReturnType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/ItemService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/OrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/model/CartModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/model/ItemModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/model/OrderModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/model/UserModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/serviceImpl/FinacialModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/serviceImpl/ItemServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/serviceImpl/OrderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/com/zsmall/service/serviceImpl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/mapping/ItemDOMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/mapping/OrderDOMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/mapping/UserDOMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/mybatis-generator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/Gruntfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/css/flat-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/css/flat-ui.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/css/flat-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/css/vendor/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/glyphicons/flat-ui-icons-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/glyphicons/flat-ui-icons-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/glyphicons/flat-ui-icons-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/glyphicons/flat-ui-icons-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/glyphicons/selection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-black.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-black.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-black.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-bolditalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-bolditalic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-bolditalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-bolditalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/fonts/lato/lato-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Calendar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Clipboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Compas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Gift-Box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Infinity-Loop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Mail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Pensils.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Pocket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Retina-Ready.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Toilet-Paper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/png/Watches.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/book.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/chat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/clipboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/clocks.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/compas.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/gift-box.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/loop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/mail.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/map.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/paper-bag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/pencils.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/retina.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/ribbon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/icons/svg/toilet-paper.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/login/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/login/imac-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/login/imac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/tile/ribbon-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/img/tile/ribbon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/js/flat-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/js/flat-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/js/vendor/html5shiv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/js/vendor/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/js/vendor/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/js/vendor/respond.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/js/vendor/video-js.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/dist/js/vendor/video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/css/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/css/demo.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/css/docs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/css/docs.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/css/src/demo.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/css/src/docs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/css/src/prettyprint.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/browser-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/browser-author.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/browser-pic-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/browser-pic-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/browser-pic-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/browser-pic-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/browser-pic-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/browser-pic-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/browser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/html-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/logo-mask-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/logo-mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/demo/video.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/example-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/footer/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/getting-started/icomoon_import.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/img/video/poster.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/js/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/assets/js/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/components.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/dropdowns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/forms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/navbar-fixed-top.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/navbar-static-top.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/navbars-with-elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/navbars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/pagination.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/radiocheck.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/select.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/switches.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/tagsinput.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/thumbnails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/tiles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/todo-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/tooltips.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/typography.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/examples/vertical-slider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/getting-started.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/docs/template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/glyphicons/flat-ui-icons-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/glyphicons/flat-ui-icons-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/glyphicons/flat-ui-icons-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/glyphicons/flat-ui-icons-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/glyphicons/selection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-black.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-black.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-black.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-bolditalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-bolditalic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-bolditalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-bolditalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/fonts/lato/lato-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Book.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Calendar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Clipboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Compas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Gift-Box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Infinity-Loop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Mail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Pensils.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Pocket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Retina-Ready.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Toilet-Paper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/png/Watches.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/book.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/chat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/clipboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/clocks.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/compas.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/gift-box.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/loop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/mail.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/map.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/paper-bag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/pencils.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/retina.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/ribbon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/icons/svg/toilet-paper.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/login/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/login/imac-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/login/imac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/tile/ribbon-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/img/tile/ribbon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/js/.jscs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/js/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/js/radiocheck.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/.csscomb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/.csslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/flat-ui.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/background-clip.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/background-variant.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/border-radius.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/buttons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/center-block.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/clearfix.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/forms.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/gradients.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/grid.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/hide-text.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/image.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/nav-divider.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/navbar-vertical-align.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/opacity.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/pagination.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/pallets.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/reset-filter.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/resize.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/responsive-visibility.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/select.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/size.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/switches.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/tab-focus.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/text-emphasis.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/text-overflow.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/mixins/vendor-prefixes.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/button-groups.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/buttons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/code.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/dropdowns.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/footer.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/forms.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/glyphicons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/input-groups.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/local-fonts.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/login.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/navbar.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/pager.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/pagination.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/palette.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/print.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/progress-bars.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/radiocheck.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/scaffolding.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/select.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/share.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/slider.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/switch.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/tagsinput.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/thumbnails.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/tiles.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/todo-list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/tooltip.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/type.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/typeahead.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/modules/video.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/spaces.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Flat-UI-master/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Home/Cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Home/Edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Home/Index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Home/ItemInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Home/Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Home/OrderList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Home/Public.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Home/Register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/Home/UserInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/CNAME" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/Gruntfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/_config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/js/jquery-1.11.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/js/jquery-1.7.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/dist/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_data/browser-bugs.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_data/core-team.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_data/glyphicons.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_data/sass-team.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_data/showcase.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_data/translations.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/ads.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/alerts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/badges.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/breadcrumbs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/button-dropdowns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/button-groups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/dropdowns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/glyphicons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/input-groups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/jumbotron.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/labels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/list-group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/media.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/navs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/page-header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/pagination.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/panels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/progress-bars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/responsive-embed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/thumbnails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/components/wells.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/code.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/forms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/grid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/helpers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/images.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/less.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/responsive-utilities.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/sass.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/css/type.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/customizer-variables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/accessibility.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/browser-device-support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/community.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/disabling-responsiveness.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/download.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/examples.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/grunt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/license.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/third-party-support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/tools.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/translations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/getting-started/whats-included.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/affix.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/alerts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/carousel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/collapse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/dropdowns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/popovers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/scrollspy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/tabs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/tooltips.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/js/transitions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/nav/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/nav/components.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/nav/css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/nav/customize.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/nav/getting-started.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/nav/javascript.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/nav/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/nav/migration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_includes/social-buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_jade/customizer-nav.jade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_jade/customizer-variables.jade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_layouts/default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_layouts/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_plugins/bridge.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/_plugins/bugify.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/brand/bootstrap-outline.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/brand/bootstrap-punchout.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/brand/bootstrap-solid.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/css/docs.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/css/src/anchor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/css/src/docs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/css/src/pygments-manni.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/flash/ZeroClipboard.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/img/components.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/img/devices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/img/sass-less.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/customize.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/docs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/ie-emulation-modes-warning.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/ie10-viewport-bug-workaround.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/ie8-responsive-file-warning.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/raw-files.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/src/application.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/src/customizer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/vendor/Blob.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/vendor/FileSaver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/vendor/ZeroClipboard.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/vendor/anchor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/vendor/autoprefixer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/vendor/holder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/vendor/jszip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/vendor/less.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/assets/js/vendor/uglify.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/browser-bugs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/components.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/customize.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/dist/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/blog/blog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/blog/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/carousel/carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/carousel/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/cover/cover.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/cover/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/dashboard/dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/dashboard/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/grid/grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/grid/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/jumbotron-narrow/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/jumbotron-narrow/jumbotron-narrow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/jumbotron/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/jumbotron/jumbotron.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/justified-nav/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/justified-nav/justified-nav.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/navbar-fixed-top/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/navbar-fixed-top/navbar-fixed-top.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/navbar-static-top/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/navbar-static-top/navbar-static-top.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/navbar/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/navbar/navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/non-responsive/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/non-responsive/non-responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/offcanvas/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/offcanvas/offcanvas.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/offcanvas/offcanvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/blog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/carousel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/dashboard.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/equal-height-columns.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/grid.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/jumbotron-narrow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/jumbotron.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/justified-nav.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/navbar-fixed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/navbar-static.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/navbar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/non-responsive.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/offcanvas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/sign-in.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/starter-template.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/sticky-footer-navbar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/sticky-footer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/screenshots/theme.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/signin/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/signin/signin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/starter-template/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/starter-template/starter-template.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/sticky-footer-navbar/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/sticky-footer-navbar/sticky-footer-navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/sticky-footer/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/sticky-footer/sticky-footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/theme/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/theme/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/tooltip-viewport/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/tooltip-viewport/tooltip-viewport.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/examples/tooltip-viewport/tooltip-viewport.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/getting-started.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/javascript.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/migration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/docs/sitemap.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/grunt/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/grunt/bs-commonjs-generator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/grunt/bs-glyphicons-data-generator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/grunt/bs-lessdoc-parser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/grunt/bs-raw-files-generator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/grunt/configBridge.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/grunt/sauce_browsers.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/.jscsrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/affix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/popover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/scrollspy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/.jshintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/affix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/phantom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/popover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/scrollspy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/tab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/unit/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/vendor/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/vendor/qunit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/vendor/qunit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/affix.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/alert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/button.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/carousel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/collapse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/dropdown.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/popover.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/scrollspy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/tab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tests/visual/tooltip.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/js/transition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/.csscomb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/.csslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/alerts.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/badges.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/bootstrap.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/breadcrumbs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/button-groups.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/buttons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/carousel.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/close.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/code.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/component-animations.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/dropdowns.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/forms.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/glyphicons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/grid.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/input-groups.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/jumbotron.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/labels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/list-group.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/media.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/alerts.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/background-variant.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/border-radius.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/buttons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/center-block.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/clearfix.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/forms.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/gradients.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/grid-framework.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/grid.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/hide-text.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/image.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/labels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/list-group.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/nav-divider.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/nav-vertical-align.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/opacity.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/pagination.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/panels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/progress-bar.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/reset-filter.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/resize.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/responsive-visibility.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/size.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/tab-focus.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/table-row.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/text-emphasis.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/text-overflow.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/mixins/vendor-prefixes.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/modals.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/navbar.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/navs.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/normalize.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/pager.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/pagination.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/panels.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/popovers.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/print.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/progress-bars.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/responsive-embed.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/responsive-utilities.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/scaffolding.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/tables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/thumbnails.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/tooltip.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/type.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/utilities.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/less/wells.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/package.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/test-infra/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/test-infra/S3Cachefile.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/test-infra/npm-shrinkwrap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/test-infra/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/test-infra/s3_cache.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/bootstrap-3.3.4/test-infra/uncached-npm-install.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/images/友情连接.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/images/图书详情.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/images/我的订单.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/images/用户注册.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/images/用户登录.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/images/购物车.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/images/首页.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/classes/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/HikariCP-3.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/commons-lang3-3.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/druid-1.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/hibernate-validator-5.2.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/hibernate-validator-6.0.18.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jackson-datatype-jdk8-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jackson-datatype-jsr310-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jackson-module-parameter-names-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jakarta.annotation-api-1.3.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jakarta.validation-api-2.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.4.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/jul-to-slf4j-1.7.29.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/log4j-api-2.12.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/log4j-to-slf4j-2.12.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/logback-classic-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/logback-core-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/mybatis-3.4.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-boot-autoconfigure-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/mybatis-spring-boot-starter-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.41.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.29.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/snakeyaml-1.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-2.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-autoconfigure-2.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-2.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-jdbc-2.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-json-2.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-logging-2.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-tomcat-2.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-validation-2.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-boot-starter-web-2.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-context-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-core-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-jcl-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-web-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-5.2.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-core-9.0.27.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-el-9.0.27.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-websocket-9.0.27.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zhangshuo-1.0-SNAPSHOT/WEB-INF/lib/validation-api-2.0.1.Final.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +822,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="HTML File" />
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -72,29 +855,6 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectId" id="1b3seqzFBSASP6P8TQjLPjgm2Rb" />
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State />
-          <State>
-            <id>Ali-Check</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>Serialization issuesJava</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>SerializableHasSerialVersionUIDField</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -106,6 +866,8 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="junit&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -119,7 +881,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -264,7 +1026,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7b08acc8-ecb3-4cab-9bfb-fe9a694f8cf6" name="Default Changelist" comment="" />
+      <changelist id="a0efd036-2ff9-4e62-a352-3c423f73a83a" name="Default Changelist" comment="" />
       <created>1582789409021</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -322,7 +1084,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="dev" />
                       </list>
                     </value>
                   </entry>
@@ -341,95 +1103,195 @@
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="108" y="-1104" key="#Project_Structure" timestamp="1597567841687">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="108" y="-1104" key="#Project_Structure/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597567841687" />
     <state x="1105" y="266" key="#Start" timestamp="1592032758759">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1105" y="266" key="#Start/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592032758759" />
-    <state x="889" y="305" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592032772768">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="175" y="-994" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597590804408">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
+    <state x="175" y="-994" key="#com.intellij.execution.impl.EditConfigurationsDialog/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597590804408" />
+    <state x="-126" y="-1054" key="#com.intellij.execution.impl.EditConfigurationsDialog/-617.-1417.2560.1417/38.23.1402.877@-617.-1417.2560.1417" timestamp="1595150239980" />
     <state x="889" y="305" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592032772768" />
-    <state x="1085" y="405" key="#com.intellij.ide.util.MemberChooser" timestamp="1592924560020">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="468" y="-1007" key="#com.intellij.ide.util.MemberChooser" timestamp="1594568319794">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
+    <state x="468" y="-1007" key="#com.intellij.ide.util.MemberChooser/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594568319794" />
+    <state x="468" y="-1023" key="#com.intellij.ide.util.MemberChooser/-617.-1440.2560.1440/0.0.1440.900@-617.-1440.2560.1440" timestamp="1593272559311" />
     <state x="1085" y="405" key="#com.intellij.ide.util.MemberChooser/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592924560020" />
+    <state x="208" y="-963" key="DBNavigator.DatasetFilterDialog" timestamp="1597592034249">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="208" y="-963" key="DBNavigator.DatasetFilterDialog/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597592034249" />
+    <state x="158" y="-1023" key="DBNavigator.ProjectSettingsDialog" timestamp="1597567709069">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="158" y="-1023" key="DBNavigator.ProjectSettingsDialog/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597567709069" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1593090826217">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1593090826217" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588037926678">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2404" height="458" key="GridCell.Tab.-1.bottom" timestamp="1594559552982">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588037926678" />
-    <state width="1182" height="11" key="GridCell.Tab.0.bottom" timestamp="1592993783103">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2404" height="458" key="GridCell.Tab.-1.bottom/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594559552982" />
+    <state width="2404" height="458" key="GridCell.Tab.-1.center" timestamp="1594559552982">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
-    <state width="1877" height="448" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874684452" />
+    <state width="2404" height="458" key="GridCell.Tab.-1.center/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594559552982" />
+    <state width="2404" height="458" key="GridCell.Tab.-1.left" timestamp="1594559552981">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="2404" height="458" key="GridCell.Tab.-1.left/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594559552981" />
+    <state width="2404" height="458" key="GridCell.Tab.-1.right" timestamp="1594559552982">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="2404" height="458" key="GridCell.Tab.-1.right/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594559552982" />
+    <state width="2518" height="534" key="GridCell.Tab.0.bottom" timestamp="1597592023933">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="2518" height="534" key="GridCell.Tab.0.bottom/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597592023933" />
+    <state width="1363" height="208" key="GridCell.Tab.0.bottom/-617.-1417.2560.1417/35.23.1405.877@35.23.1405.877" timestamp="1597591808523" />
+    <state width="1355" height="190" key="GridCell.Tab.0.bottom/-617.-1417.2560.1417/38.23.1402.877@38.23.1402.877" timestamp="1594744978584" />
+    <state width="2057" height="322" key="GridCell.Tab.0.bottom/-617.-1417.2560.1417/39.23.1401.877@-617.-1417.2560.1417" timestamp="1595176313428" />
+    <state width="2404" height="390" key="GridCell.Tab.0.bottom/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594653745823" />
+    <state width="2404" height="390" key="GridCell.Tab.0.bottom/-617.-1417.2560.1417/43.23.1397.877@-617.-1417.2560.1417" timestamp="1594570211486" />
     <state width="1184" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592982053049" />
     <state width="1182" height="11" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592993783103" />
     <state width="1998" height="212" key="GridCell.Tab.0.bottom/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592929695440" />
-    <state width="1182" height="11" key="GridCell.Tab.0.center" timestamp="1592993783103">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2057" height="298" key="GridCell.Tab.0.bottom/36.23.1404.877@36.23.1404.877" timestamp="1595405760080" />
+    <state width="2518" height="534" key="GridCell.Tab.0.center" timestamp="1597592023928">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
-    <state width="1877" height="448" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874684452" />
+    <state width="2518" height="534" key="GridCell.Tab.0.center/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597592023928" />
+    <state width="1363" height="208" key="GridCell.Tab.0.center/-617.-1417.2560.1417/35.23.1405.877@35.23.1405.877" timestamp="1597591808522" />
+    <state width="1355" height="190" key="GridCell.Tab.0.center/-617.-1417.2560.1417/38.23.1402.877@38.23.1402.877" timestamp="1594744978584" />
+    <state width="2057" height="322" key="GridCell.Tab.0.center/-617.-1417.2560.1417/39.23.1401.877@-617.-1417.2560.1417" timestamp="1595176313425" />
+    <state width="2404" height="390" key="GridCell.Tab.0.center/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594653745821" />
+    <state width="2404" height="390" key="GridCell.Tab.0.center/-617.-1417.2560.1417/43.23.1397.877@-617.-1417.2560.1417" timestamp="1594570211485" />
     <state width="1184" height="194" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592982053048" />
     <state width="1182" height="11" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592993783103" />
     <state width="1998" height="212" key="GridCell.Tab.0.center/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592929695440" />
-    <state width="1182" height="11" key="GridCell.Tab.0.left" timestamp="1592993783103">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2057" height="298" key="GridCell.Tab.0.center/36.23.1404.877@36.23.1404.877" timestamp="1595405760079" />
+    <state width="2518" height="534" key="GridCell.Tab.0.left" timestamp="1597592023927">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
-    <state width="1877" height="448" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874684451" />
+    <state width="2518" height="534" key="GridCell.Tab.0.left/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597592023927" />
+    <state width="1363" height="208" key="GridCell.Tab.0.left/-617.-1417.2560.1417/35.23.1405.877@35.23.1405.877" timestamp="1597591808522" />
+    <state width="1355" height="190" key="GridCell.Tab.0.left/-617.-1417.2560.1417/38.23.1402.877@38.23.1402.877" timestamp="1594744978583" />
+    <state width="2057" height="322" key="GridCell.Tab.0.left/-617.-1417.2560.1417/39.23.1401.877@-617.-1417.2560.1417" timestamp="1595176313424" />
+    <state width="2404" height="390" key="GridCell.Tab.0.left/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594653745821" />
+    <state width="2404" height="390" key="GridCell.Tab.0.left/-617.-1417.2560.1417/43.23.1397.877@-617.-1417.2560.1417" timestamp="1594570211485" />
     <state width="1184" height="194" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592982053048" />
     <state width="1182" height="11" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592993783103" />
     <state width="1998" height="212" key="GridCell.Tab.0.left/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592929695440" />
-    <state width="1182" height="11" key="GridCell.Tab.0.right" timestamp="1592993783103">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2057" height="298" key="GridCell.Tab.0.left/36.23.1404.877@36.23.1404.877" timestamp="1595405760079" />
+    <state width="2518" height="534" key="GridCell.Tab.0.right" timestamp="1597592023932">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
-    <state width="1877" height="448" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874684452" />
+    <state width="2518" height="534" key="GridCell.Tab.0.right/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597592023932" />
+    <state width="1363" height="208" key="GridCell.Tab.0.right/-617.-1417.2560.1417/35.23.1405.877@35.23.1405.877" timestamp="1597591808523" />
+    <state width="1355" height="190" key="GridCell.Tab.0.right/-617.-1417.2560.1417/38.23.1402.877@38.23.1402.877" timestamp="1594744978584" />
+    <state width="2057" height="322" key="GridCell.Tab.0.right/-617.-1417.2560.1417/39.23.1401.877@-617.-1417.2560.1417" timestamp="1595176313427" />
+    <state width="2404" height="390" key="GridCell.Tab.0.right/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594653745822" />
+    <state width="2404" height="390" key="GridCell.Tab.0.right/-617.-1417.2560.1417/43.23.1397.877@-617.-1417.2560.1417" timestamp="1594570211485" />
     <state width="1184" height="194" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592982053049" />
     <state width="1182" height="11" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592993783103" />
     <state width="1998" height="212" key="GridCell.Tab.0.right/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592929695440" />
-    <state width="1182" height="11" key="GridCell.Tab.1.bottom" timestamp="1592993783103">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2057" height="298" key="GridCell.Tab.0.right/36.23.1404.877@36.23.1404.877" timestamp="1595405760080" />
+    <state width="2518" height="534" key="GridCell.Tab.1.bottom" timestamp="1597592096876">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
-    <state width="1877" height="448" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874691994" />
+    <state width="2518" height="534" key="GridCell.Tab.1.bottom/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597592096876" />
+    <state width="1988" height="297" key="GridCell.Tab.1.bottom/-617.-1417.2560.1417/35.23.1405.877@35.23.1405.877" timestamp="1597591808221" />
+    <state width="1355" height="190" key="GridCell.Tab.1.bottom/-617.-1417.2560.1417/38.23.1402.877@38.23.1402.877" timestamp="1594744978586" />
+    <state width="2057" height="298" key="GridCell.Tab.1.bottom/-617.-1417.2560.1417/39.23.1401.877@-617.-1417.2560.1417" timestamp="1595174755229" />
+    <state width="2404" height="390" key="GridCell.Tab.1.bottom/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594653745695" />
+    <state width="2404" height="390" key="GridCell.Tab.1.bottom/-617.-1417.2560.1417/43.23.1397.877@-617.-1417.2560.1417" timestamp="1594570211487" />
     <state width="1184" height="194" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592982059594" />
     <state width="1182" height="11" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592993783103" />
     <state width="1998" height="212" key="GridCell.Tab.1.bottom/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592929695440" />
-    <state width="1182" height="11" key="GridCell.Tab.1.center" timestamp="1592993783103">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2057" height="298" key="GridCell.Tab.1.bottom/36.23.1404.877@36.23.1404.877" timestamp="1595405760083" />
+    <state width="2518" height="534" key="GridCell.Tab.1.center" timestamp="1597592096875">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
-    <state width="1877" height="448" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874691994" />
+    <state width="2518" height="534" key="GridCell.Tab.1.center/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597592096875" />
+    <state width="1988" height="297" key="GridCell.Tab.1.center/-617.-1417.2560.1417/35.23.1405.877@35.23.1405.877" timestamp="1597591808220" />
+    <state width="1355" height="190" key="GridCell.Tab.1.center/-617.-1417.2560.1417/38.23.1402.877@38.23.1402.877" timestamp="1594744978585" />
+    <state width="2057" height="298" key="GridCell.Tab.1.center/-617.-1417.2560.1417/39.23.1401.877@-617.-1417.2560.1417" timestamp="1595174755229" />
+    <state width="2404" height="390" key="GridCell.Tab.1.center/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594653745694" />
+    <state width="2404" height="390" key="GridCell.Tab.1.center/-617.-1417.2560.1417/43.23.1397.877@-617.-1417.2560.1417" timestamp="1594570211486" />
     <state width="1184" height="194" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592982059594" />
     <state width="1182" height="11" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592993783103" />
     <state width="1998" height="212" key="GridCell.Tab.1.center/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592929695440" />
-    <state width="1182" height="11" key="GridCell.Tab.1.left" timestamp="1592993783103">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2057" height="298" key="GridCell.Tab.1.center/36.23.1404.877@36.23.1404.877" timestamp="1595405760081" />
+    <state width="2518" height="534" key="GridCell.Tab.1.left" timestamp="1597592096874">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
-    <state width="1877" height="448" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874691994" />
+    <state width="2518" height="534" key="GridCell.Tab.1.left/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597592096874" />
+    <state width="1988" height="297" key="GridCell.Tab.1.left/-617.-1417.2560.1417/35.23.1405.877@35.23.1405.877" timestamp="1597591808220" />
+    <state width="1355" height="190" key="GridCell.Tab.1.left/-617.-1417.2560.1417/38.23.1402.877@38.23.1402.877" timestamp="1594744978585" />
+    <state width="2057" height="298" key="GridCell.Tab.1.left/-617.-1417.2560.1417/39.23.1401.877@-617.-1417.2560.1417" timestamp="1595174755228" />
+    <state width="2404" height="390" key="GridCell.Tab.1.left/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594653745694" />
+    <state width="2404" height="390" key="GridCell.Tab.1.left/-617.-1417.2560.1417/43.23.1397.877@-617.-1417.2560.1417" timestamp="1594570211486" />
     <state width="1184" height="194" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592982059594" />
     <state width="1182" height="11" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592993783103" />
     <state width="1998" height="212" key="GridCell.Tab.1.left/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592929695440" />
-    <state width="1182" height="11" key="GridCell.Tab.1.right" timestamp="1592993783103">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2057" height="298" key="GridCell.Tab.1.left/36.23.1404.877@36.23.1404.877" timestamp="1595405760081" />
+    <state width="2518" height="534" key="GridCell.Tab.1.right" timestamp="1597592096875">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
     </state>
-    <state width="1877" height="448" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874691994" />
+    <state width="2518" height="534" key="GridCell.Tab.1.right/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597592096875" />
+    <state width="1988" height="297" key="GridCell.Tab.1.right/-617.-1417.2560.1417/35.23.1405.877@35.23.1405.877" timestamp="1597591808221" />
+    <state width="1355" height="190" key="GridCell.Tab.1.right/-617.-1417.2560.1417/38.23.1402.877@38.23.1402.877" timestamp="1594744978586" />
+    <state width="2057" height="298" key="GridCell.Tab.1.right/-617.-1417.2560.1417/39.23.1401.877@-617.-1417.2560.1417" timestamp="1595174755229" />
+    <state width="2404" height="390" key="GridCell.Tab.1.right/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594653745695" />
+    <state width="2404" height="390" key="GridCell.Tab.1.right/-617.-1417.2560.1417/43.23.1397.877@-617.-1417.2560.1417" timestamp="1594570211487" />
     <state width="1184" height="194" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592982059594" />
     <state width="1182" height="11" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592993783103" />
     <state width="1998" height="212" key="GridCell.Tab.1.right/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592929695440" />
+    <state width="2057" height="298" key="GridCell.Tab.1.right/36.23.1404.877@36.23.1404.877" timestamp="1595405760082" />
+    <state x="95" y="-983" width="900" height="722" key="SettingsEditor" timestamp="1597590819066">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/-2560.0.2560.1440/0.0.1440.900@0.0.1440.900" timestamp="1593186115844" />
+    <state x="221" y="89" key="SettingsEditor/-2560.23.2560.1417/0.0.1440.900@0.0.1440.900" timestamp="1593186446236" />
+    <state x="95" y="-983" key="SettingsEditor/-617.-1417.2560.1417/35.23.1405.877@-617.-1417.2560.1417" timestamp="1597590819066" />
+    <state x="183" y="99" key="SettingsEditor/-617.-1417.2560.1417/37.23.1403.877@37.23.1403.877" timestamp="1594743362905" />
+    <state x="253" y="109" width="900" height="722" key="SettingsEditor/-617.-1417.2560.1417/38.23.1402.877@38.23.1402.877" timestamp="1594742393106" />
+    <state x="-224" y="-1298" width="1194" height="860" key="SettingsEditor/-617.-1440.2560.1440/0.0.1440.900@-617.-1440.2560.1440" timestamp="1593272705328" />
+    <state x="450" y="165" width="540" height="524" key="StructurePopup" timestamp="1593167749992">
+      <screen x="0" y="23" width="1440" height="808" />
+    </state>
+    <state x="450" y="165" width="540" height="524" key="StructurePopup/0.23.1440.808@0.23.1440.808" timestamp="1593167749992" />
     <state width="1291" height="153" key="XDebugger.FullValuePopup" timestamp="1592038550865">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="968" height="113" key="XDebugger.FullValuePopup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587874709087" />
     <state width="1291" height="153" key="XDebugger.FullValuePopup/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592038550865" />
+    <state x="330" y="-962" width="598" height="490" key="find.popup" timestamp="1595174703065">
+      <screen x="-617" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="330" y="-962" width="598" height="490" key="find.popup/-617.-1417.2560.1417/39.23.1401.877@-617.-1417.2560.1417" timestamp="1595174703065" />
+    <state x="330" y="-962" width="598" height="490" key="find.popup/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594653537475" />
     <state x="1040" y="412" key="git4idea.branch.GitSmartOperationDialog" timestamp="1593090358553">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1040" y="412" key="git4idea.branch.GitSmartOperationDialog/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1593090358553" />
-    <state x="2143" y="540" width="672" height="678" key="search.everywhere.popup" timestamp="1592664140654">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="632" y="274" width="700" height="530" key="recent.locations.popup" timestamp="1594535709407">
+      <screen x="47" y="23" width="1873" height="1057" />
     </state>
+    <state x="632" y="274" width="700" height="530" key="recent.locations.popup/212.1103.1440.877/47.23.1873.1057@47.23.1873.1057" timestamp="1594535709407" />
+    <state x="700" y="342" width="670" height="426" key="search.everywhere.popup" timestamp="1595492522275">
+      <screen x="34" y="23" width="1406" height="877" />
+    </state>
+    <state x="596" y="-901" width="672" height="687" key="search.everywhere.popup/-617.-1417.2560.1417/41.23.1399.877@-617.-1417.2560.1417" timestamp="1594654372115" />
+    <state x="596" y="-916" width="672" height="698" key="search.everywhere.popup/-617.-1440.2560.1440/0.0.1440.900@-617.-1440.2560.1440" timestamp="1593271532199" />
     <state x="2143" y="540" width="672" height="678" key="search.everywhere.popup/2560.359.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1592664140654" />
+    <state x="700" y="342" width="670" height="426" key="search.everywhere.popup/34.23.1406.877@34.23.1406.877" timestamp="1595492522275" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -439,97 +1301,12 @@
           <line>33</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zsmall/aspect/LogAspect.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>zsmall:war</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>zsmall</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
