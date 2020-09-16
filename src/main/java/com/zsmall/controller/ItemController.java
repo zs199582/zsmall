@@ -7,6 +7,8 @@ import com.zsmall.response.CommonReturnType;
 import com.zsmall.service.ItemService;
 import com.zsmall.service.model.CartModel;
 import com.zsmall.service.model.ItemModel;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
@@ -33,6 +35,7 @@ import java.util.Map;
 public class ItemController {
     @Autowired
     private ItemService itemService;
+
     @Autowired
     private HttpServletRequest httpServletRequest;
 
@@ -40,6 +43,7 @@ public class ItemController {
     //获取所有商品
     @RequestMapping("/portal")
     @ResponseBody
+    @ApiOperation(value = "获取所有商品")
     public CommonReturnType getItemList(){
         ItemModel[] items = itemService.getItems();
         return CommonReturnType.create(items);

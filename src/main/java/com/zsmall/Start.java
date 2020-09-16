@@ -29,6 +29,6 @@ public class Start {
 //        for (String couponCode : testMap.keySet()) {
 //            result = result && testMap.get(couponCode);
 //        }
-        System.out.println(Integer.parseInt(null));
+
     }
 }

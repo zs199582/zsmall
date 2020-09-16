@@ -7,6 +7,7 @@ import com.zsmall.service.model.ItemModel;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
@@ -21,7 +22,7 @@ public class ItemServiceImpl implements ItemService {
 
     //获取所有商品
     @Override
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRED)
     public ItemModel[] getItems() {
         List<ItemDO> items = itemDOMapper.selectAllItems();
         if(items==null) return null;
